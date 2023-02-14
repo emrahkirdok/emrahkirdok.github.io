@@ -19,6 +19,4 @@ format:
     theme: vetiver
     css: styles.css
     toc: true
-
-
-
+    toc-depth: 2
