@@ -10,7 +10,8 @@ Depends:
 Imports:
     tidyverse,
     sf,
-    gganimate
+    gganimate,
+    maps
 Suggests:
     downlit,
     htmltools,
