@@ -11,7 +11,8 @@ Imports:
     tidyverse,
     sf,
     gganimate,
-    maps
+    maps,
+    gifski
 Suggests:
     downlit,
     htmltools,
