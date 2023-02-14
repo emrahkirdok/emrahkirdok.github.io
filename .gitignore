@@ -1,2 +1,4 @@
 *.Rproj
 _site
+_freeze
+/.quarto/
