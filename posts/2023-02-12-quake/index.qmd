@@ -8,7 +8,7 @@ lang: tr
 execute:
     echo: false
     warning: false
-draft: true
+draft: false
 ---
 
 Geçtiğimiz haftanın nasıl geçtiğini anlayamadım. Son bir aydır, Avrupa Birliği tarafından desteklenen [NEOMATRIX](https://neomatrix.metu.edu.tr/) projesi kapsamında bir çalıştay hazırlığı içerisindeydik. Bu kapsamda, Stokholm, Paris ve Ankara'dan hocalar gelecek ve üzerinde çalıştığımız bir antik metagenomik analiz protokolü hakkında bir çalıştay gerçekleştirecektik.
