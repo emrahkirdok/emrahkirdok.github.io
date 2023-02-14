@@ -30,10 +30,7 @@ Tabii ki bir deprem bilimci ya da jeolog değilim. Bu konuda asla ahkam kesemem,
 library(tidyverse)
 library(ggplot2)
 library(sf)
-library(ggpubr)
 library(gganimate)
-library(magick)
-library(gifski)
 
 world <- map_data("world")
 world <- world %>%
