@@ -4,7 +4,7 @@
     "href": "index.html",
     "title": "Blog",
     "section": "",
-    "text": "In this page you could find the blog posts. I am writing in Turkish and English. When I try to explain some concepts to studends or general audicne in Turkey, I use Turkish. For academic stuff, I use English.\n\nPosts\n\n\n\n\n\n\n\n\n\n  \n\n\n\n\nEvrimsel Genombilim Yaz Okulu 2022\n\n\n\n\n\n\n\ntürkçe\n\n\nbioinformatics\n\n\nekoevo\n\n\nmersin\n\n\n\n\n\n\n\n\n\n\n\nMar 23, 2022\n\n\nEmrah Kırdök, Ph. D.\n\n\n\n\n\n\nNo matching items"
+    "text": "In this page you could find the blog posts. I am writing in Turkish and English. When I try to explain some concepts to studends or general audicne in Turkey, I use Turkish. For academic stuff, I use English.\n\nPosts\n\n\n\n\n\n\n\n\n\n  \n\n\n\n\nKahramanmaraş Depremi\n\n\n\n\n\n\n\nTürkçe\n\n\nVeri Analizi\n\n\nDeprem\n\n\nR\n\n\ngganimate\n\n\n\n\n\n\n\n\n\n\n\nFeb 13, 2023\n\n\nEmrah Kırdök, Ph.D.\n\n\n\n\n\n\n  \n\n\n\n\nEvrimsel Genombilim Yaz Okulu 2022\n\n\n\n\n\n\n\ntürkçe\n\n\nbioinformatics\n\n\nekoevo\n\n\nmersin\n\n\n\n\n\n\n\n\n\n\n\nMar 23, 2022\n\n\nEmrah Kırdök, Ph. D.\n\n\n\n\n\n\nNo matching items"
   },
   {
     "objectID": "talks.html",
@@ -12,6 +12,20 @@
     "title": "Talks",
     "section": "",
     "text": "At Aykut Kence Evolution Meeting 2022, I presented a talk named What does Ancient human microbes tell us? You could find this video in this link (my part starts on 1 hour)\n\nvideo"
+  },
+  {
+    "objectID": "posts/2023-02-12-quake/index.html",
+    "href": "posts/2023-02-12-quake/index.html",
+    "title": "Kahramanmaraş Depremi",
+    "section": "",
+    "text": "Geçtiğimiz haftanın nasıl geçtiğini anlayamadım. Son bir aydır, Avrupa Birliği tarafından desteklenen NEOMATRIX projesi kapsamında bir çalıştay hazırlığı içerisindeydik. Bu kapsamda, Stokholm, Paris ve Ankara’dan hocalar gelecek ve üzerinde çalıştığımız bir antik metagenomik analiz protokolü hakkında bir çalıştay gerçekleştirecektik.\nPazar akşamı ekip gelmiş, hazırlıklar olabildiğinde tamamlanmış ve artık çalıştay aşamasına geçmeye yaklaşmıştık. Ancak, Pazartesi sabaha karşı depremle uyandık…\nOlayın bu kısmına çok fazla giremeyeceğim ancak sonuç olarak çalıştay ve bütün toplantılar iptal oldu. Yurtdışından gelen hocaları ise Ankara üzerinden ülkelerine ulaşmalarını sağladık. Hepimize geçmiş olsun.\nBen de bir yandan ailemle ilgilenmek için telefon trafiği içerisindeyken, aklımın bir köşesinde “Acaba ülkemizde gerçekleşen depremleri inceleyebilir miyiz?” sorusu dönüyordu.\nTabii ki bir deprem bilimci ya da jeolog değilim. Bu konuda asla ahkam kesemem, ancak hali hazırda açık bir şekilde paylaşılan veriyi kullanarak bazı denemeler yapmakta özgürüm. Bu yazıda aşağıdaki temel noktalara odaklanmaya çalışacağım:"
+  },
+  {
+    "objectID": "posts/2023-02-12-quake/index.html#doğu-anadolu-fayının-kırılması",
+    "href": "posts/2023-02-12-quake/index.html#doğu-anadolu-fayının-kırılması",
+    "title": "Kahramanmaraş Depremi",
+    "section": "Doğu Anadolu fayının kırılması",
+    "text": "Doğu Anadolu fayının kırılması\nFay hatlarının doğudan batıya doğru kırıldığını haberlerden duymuşsunuzdur mutlaka. Acaba bu bilgiyi, elimizdeki veriyi kullanarak görselleştirebilir miyiz? Bunun Van depreminden önceki (09 Kasım 2011) depremleri filtrelememiz ve incelememizi sadece Doğu bölgesine sınırlamamız gerekidir (?@fig-quake-3).\n\n\nNULL"
   },
   {
     "objectID": "posts/2022-03-23-evrimsel-genombilim/index.html",
