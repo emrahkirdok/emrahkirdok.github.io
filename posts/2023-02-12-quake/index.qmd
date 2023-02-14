@@ -166,7 +166,7 @@ Ancak benim ilgilendiğim nokta şu an için Kahramanmaraş depremi. Şimdi bira
 ```{r}
 #| label: fig-quake-2
 #| fig-cap: "Kahramanmaraş bölgesinde yaşanan depremin animasyonu" 
-data %>% 
+anim <- data %>% 
   filter(Date > as.Date("2023-02-06")) %>%
     ggplot()+
       geom_map(data = world, map = world, aes(long, lat, map_id = region), fill = "white")+
@@ -178,6 +178,8 @@ data %>%
       xlim(c(25,45)) + ylim(c(35,42.5)) +
       enter_fade() +
       theme(legend.position = "node")
+
+animate(anim, renderer=gifski_renderer())
 ```
 
 ## Doğu Anadolu fayının kırılması
