@@ -185,20 +185,52 @@ animate(anim, renderer=gifski_renderer())
 
 ## Doğu Anadolu fayının kırılması
 
-Fay hatlarının doğudan batıya doğru kırıldığını haberlerden duymuşsunuzdur mutlaka. Acaba bu bilgiyi, elimizdeki veriyi kullanarak görselleştirebilir miyiz? Bunun Van depreminden önceki (09 Kasım 2011) depremleri filtrelememiz ve incelememizi sadece Doğu bölgesine sınırlamamız gerekidir (@fig-quake-3). 
+Fay hatlarının doğudan batıya doğru kırıldığını haberlerden duymuşsunuzdur mutlaka. Küçük bir aramayla, Doğu Anadolu fayı üzerinde bulunan deprem serilerine ulaştım:
+
++ Adana Ceyhan depremi (1998)
++ Bingöl depremi (2003)
++ Elazığ depremleri (2003, 2010)
++ Gaziantep Kahramanmaraş depremi (2023)
+
+Acaba bu bilgiyi, elimizdeki veriyi kullanarak görselleştirebilir miyiz? Bunun için elimizdeki veriyi 1998 Adana Ceyhan depreminden sonraki depremleri içerecek şekilde filtreliyorum. Ayrıca depremleri sadece Doğu Anadolu fay hattını içerecek şekilde filtreliyorum ki deprem serisini daha rahat anlayalım (@fig-quake-3). 
 
 ```{r}
 #| label: fig-quake-3
 #| fig-cap: "Doğu Anadolu fay hattının kırılması" 
 data %>% 
-  filter(Date > as.Date("2011-11-09")) %>%
+  filter(Date > as.Date("1998-06-27")) %>%
   filter(Longitude > 35) %>%
+  filter(Longitude < 42.5) %>%
+  filter(Latitude < 40) %>%
     ggplot()+
       geom_map(data = world, map = world, aes(long, lat, map_id = region), fill = "white")+
         coord_fixed(ratio = 1.2)+
       geom_point(aes(y = Latitude, x = Longitude, fill = Magnitude, size = Magnitude, alpha=alpha), 
         shape=21, color = "NA") +
       transition_manual(Date, cumulative = T) +
+      scale_fill_gradientn(colours = c("#15607a", "#7495a6", "#c7cdd1", "#cc734d", "#a63716")) + 
+      xlim(c(25,45)) + ylim(c(35,42.5)) +
+      theme(legend.position = "node")
+```
+
+Şekle baktığımızda gerçekten Doğu Anadolu fayı ekseninde bir hareketlilik göze çarpıyor.
+
+Bu hareketi daha iyi göstermek için bir animasyon daha oluşturalım (@fig-quake-4).
+
+```{r}
+#| label: fig-quake-4
+#| fig-cap: "Doğu Anadolu fay hattının kırılması" 
+data %>% 
+  filter(Date > as.Date("1998-06-27")) %>%
+  filter(Longitude > 35) %>%
+  filter(Longitude < 42.5) %>%
+  filter(Latitude < 40) %>%
+    ggplot()+
+      geom_map(data = world, map = world, aes(long, lat, map_id = region), fill = "white")+
+        coord_fixed(ratio = 1.2)+
+      geom_point(aes(y = Latitude, x = Longitude, fill = Magnitude, size = Magnitude, alpha=alpha), 
+       shape=20, color = "NA") +
+      transition_manual(Date, cumulative = F) +
       scale_fill_gradientn(colours = c("#15607a", "#7495a6", "#c7cdd1", "#cc734d", "#a63716")) + 
       xlim(c(25,45)) + ylim(c(35,42.5)) +
       theme(legend.position = "node")
