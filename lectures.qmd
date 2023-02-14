@@ -1,0 +1,15 @@
+---
+title: "Lectures"
+excerpt: "Lecures given by me"
+permalink: "/lectures.html"
+---
+
+At Mersin University Department of Biotechnology, I am giving ten courses that span to various themes. Among these, these are my favourites:
+
++ Data Analysis in Life Sciences [site](https://emrahkirdok.github.io/ybva/index.html)
+  + Undergrad level Data Analysis course
+  + Undergrad level Statistical Learning course
+  + Grad level Data Analysis in Biotechnology course
++ Bioinformatics [site](https://emrahkirdok.github.io/biyoinformatik/index.html)
+  + Undergrad level Bioinformatics
+  + Grad level Advanced Bioinformatics
