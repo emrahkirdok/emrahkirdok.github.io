@@ -4,7 +4,7 @@
     "href": "index.html",
     "title": "Blog",
     "section": "",
-    "text": "In this page you could find the blog posts. I am writing in Turkish and English. When I try to explain some concepts to studends or general audicne in Turkey, I use Turkish. For academic stuff, I use English.\n\nPosts\n\n\n\n\n\n\n\n\n\n  \n\n\n\n\nKahramanmaraş Depremi\n\n\n\n\n\n\n\nTürkçe\n\n\nVeri Analizi\n\n\nDeprem\n\n\nR\n\n\ngganimate\n\n\n\n\n\n\n\n\n\n\n\nFeb 13, 2023\n\n\nEmrah Kırdök, Ph.D.\n\n\n\n\n\n\n  \n\n\n\n\nEvrimsel Genombilim Yaz Okulu 2022\n\n\n\n\n\n\n\ntürkçe\n\n\nbioinformatics\n\n\nekoevo\n\n\nmersin\n\n\n\n\n\n\n\n\n\n\n\nMar 23, 2022\n\n\nEmrah Kırdök, Ph. D.\n\n\n\n\n\n\nNo matching items"
+    "text": "In this page you could find my blog posts.\nNot too many content for now but I will write in Turkish and English. I will use Turkish when I try to explain some concepts to studends or general audience in Turkey. I will use English to write about academic concepts.\n\nPosts\n\n\n\n\n\n\n\n\n\n  \n\n\n\n\nKahramanmaraş Depremi\n\n\n\n\n\n\n\nTürkçe\n\n\nVeri Analizi\n\n\nDeprem\n\n\nR\n\n\ngganimate\n\n\n\n\n\n\n\n\n\n\n\nFeb 13, 2023\n\n\nEmrah Kırdök, Ph.D.\n\n\n\n\n\n\n  \n\n\n\n\nEvrimsel Genombilim Yaz Okulu 2022\n\n\n\n\n\n\n\ntürkçe\n\n\nbioinformatics\n\n\nekoevo\n\n\nmersin\n\n\n\n\n\n\n\n\n\n\n\nMar 23, 2022\n\n\nEmrah Kırdök, Ph. D.\n\n\n\n\n\n\nNo matching items"
   },
   {
     "objectID": "talks.html",
@@ -25,7 +25,7 @@
     "href": "posts/2023-02-12-quake/index.html#doğu-anadolu-fayının-kırılması",
     "title": "Kahramanmaraş Depremi",
     "section": "Doğu Anadolu fayının kırılması",
-    "text": "Doğu Anadolu fayının kırılması\nFay hatlarının doğudan batıya doğru kırıldığını haberlerden duymuşsunuzdur mutlaka. Acaba bu bilgiyi, elimizdeki veriyi kullanarak görselleştirebilir miyiz? Bunun Van depreminden önceki (09 Kasım 2011) depremleri filtrelememiz ve incelememizi sadece Doğu bölgesine sınırlamamız gerekidir (Figür 7).\n\n\n\n\n\nFigür 7: Doğu Anadolu fay hattının kırılması"
+    "text": "Doğu Anadolu fayının kırılması\nFay hatlarının doğudan batıya doğru kırıldığını haberlerden duymuşsunuzdur mutlaka. Küçük bir aramayla, Doğu Anadolu fayı üzerinde bulunan deprem serilerine ulaştım:\n\nAdana Ceyhan depremi (1998)\nBingöl depremi (2003)\nElazığ depremleri (2003, 2010)\nGaziantep Kahramanmaraş depremi (2023)\n\nAcaba bu bilgiyi, elimizdeki veriyi kullanarak görselleştirebilir miyiz? Bunun için elimizdeki veriyi 1998 Adana Ceyhan depreminden sonraki depremleri içerecek şekilde filtreliyorum. Ayrıca depremleri sadece Doğu Anadolu fay hattını içerecek şekilde filtreliyorum ki deprem serisini daha rahat anlayalım (Figür 7).\n\n\n\n\n\nFigür 7: Doğu Anadolu fay hattının kırılması\n\n\n\n\nŞekle baktığımızda gerçekten Doğu Anadolu fayı ekseninde bir hareketlilik göze çarpıyor.\nBu hareketi daha iyi göstermek için bir animasyon daha oluşturalım (Figür 8).\n\n\n\n\n\nFigür 8: Doğu Anadolu fay hattının kırılması"
   },
   {
     "objectID": "posts/2022-03-23-evrimsel-genombilim/index.html",
