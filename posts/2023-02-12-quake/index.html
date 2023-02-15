@@ -143,7 +143,7 @@ ul.task-list li input[type="checkbox"] {
       <div>
       <div class="quarto-title-meta-heading">Yayınlanma Tarihi</div>
       <div class="quarto-title-meta-contents">
-        <p class="date">13 Şubat 2023</p>
+        <p class="date">15 Şubat 2023</p>
       </div>
     </div>
     
@@ -160,11 +160,10 @@ ul.task-list li input[type="checkbox"] {
    
   <ul class="collapse">
   <li><a href="#genel-görünüm" id="toc-genel-görünüm" class="nav-link active" data-scroll-target="#genel-görünüm">Genel görünüm</a></li>
-  <li><a href="#kahramanmaraş-depremi-ve-doğu-anadolu-fay-hattı" id="toc-kahramanmaraş-depremi-ve-doğu-anadolu-fay-hattı" class="nav-link" data-scroll-target="#kahramanmaraş-depremi-ve-doğu-anadolu-fay-hattı">Kahramanmaraş depremi ve Doğu Anadolu fay hattı</a>
-  <ul class="collapse">
+  <li><a href="#kahramanmaraş-depremi-ve-doğu-anadolu-fay-hattı" id="toc-kahramanmaraş-depremi-ve-doğu-anadolu-fay-hattı" class="nav-link" data-scroll-target="#kahramanmaraş-depremi-ve-doğu-anadolu-fay-hattı">Kahramanmaraş depremi ve Doğu Anadolu fay hattı</a></li>
   <li><a href="#doğu-anadolu-fayının-kırılması" id="toc-doğu-anadolu-fayının-kırılması" class="nav-link" data-scroll-target="#doğu-anadolu-fayının-kırılması">Doğu Anadolu fayının kırılması</a></li>
-  </ul></li>
   <li><a href="#sonuç" id="toc-sonuç" class="nav-link" data-scroll-target="#sonuç">Sonuç</a></li>
+  <li><a href="#teşekkür" id="toc-teşekkür" class="nav-link" data-scroll-target="#teşekkür">Teşekkür</a></li>
   </ul>
 </nav>
     </div>
@@ -177,19 +176,14 @@ ul.task-list li input[type="checkbox"] {
 <p>Geçtiğimiz haftanın nasıl geçtiğini anlayamadım. Son bir aydır, Avrupa Birliği tarafından desteklenen <a href="https://neomatrix.metu.edu.tr/">NEOMATRIX</a> projesi kapsamında bir çalıştay hazırlığı içerisindeydik. Bu kapsamda, Stokholm, Paris ve Ankara’dan hocalar gelecek ve üzerinde çalıştığımız bir antik metagenomik analiz protokolü hakkında bir çalıştay gerçekleştirecektik.</p>
 <p>Pazar akşamı ekip gelmiş, hazırlıklar olabildiğinde tamamlanmış ve artık çalıştay aşamasına geçmeye yaklaşmıştık. Ancak, Pazartesi sabaha karşı depremle uyandık…</p>
 <p>Olayın bu kısmına çok fazla giremeyeceğim ancak sonuç olarak çalıştay ve bütün toplantılar iptal oldu. Yurtdışından gelen hocaları ise Ankara üzerinden ülkelerine ulaşmalarını sağladık. Hepimize geçmiş olsun.</p>
-<p>Ben de bir yandan ailemle ilgilenmek için telefon trafiği içerisindeyken, aklımın bir köşesinde <strong>“Acaba ülkemizde gerçekleşen depremleri inceleyebilir miyiz?”</strong> sorusu dönüyordu.</p>
-<p>Tabii ki bir deprem bilimci ya da jeolog değilim. Bu konuda asla ahkam kesemem, ancak hali hazırda açık bir şekilde paylaşılan veriyi kullanarak bazı denemeler yapmakta özgürüm. Bu yazıda aşağıdaki temel noktalara odaklanmaya çalışacağım:</p>
-<ol type="1">
-<li>Ülkemizin deprem kuşağında olduğunu göstermek</li>
-<li>Kahramanmaraş - ve Doğu Anadolu - özelindeki depremlerin oluşma sırasını göstermek</li>
-<li>Bu bilgileri kullanarak eğitim materyali hazırlamak</li>
-</ol>
+<p>Ben de bir yandan telefon trafiği içerisindeyken, aklımın bir köşesinde <strong>“Acaba ülkemizde gerçekleşen depremleri inceleyebilir miyiz?”</strong> sorusu dönüyordu.</p>
+<p>Tabii ki bir deprem bilimci ya da jeolog değilim. Bu konuda asla ahkam kesemem, ancak hali hazırda açık bir şekilde paylaşılan veriyi kullanarak bazı denemeler yapabiliriz. Bu yazıda amacım sadece ülkemizin bir deprem kuşağında olduğunu göstermek, ve depremlerin, fay hatları üzerinde nasıl hareket ettiğini görselleştirmek.</p>
 <div class="cell" data-warnings="false">
 
 </div>
 <section id="genel-görünüm" class="level1">
 <h1>Genel görünüm</h1>
-<p>Öncelikle 1990 yılından bu yana yaşanmış depremlerin verisini AFAD internet sitesinden indirdim. Görünüşe göre veri Türkiye’de bulunan istasyonlar tarafından hissedilmiş bütün deprem kayıtlarını içeriyor. Dolayısıyla veriyi bir miktar işlemeniz gerekebilir. Ancak öncelikle verinin şeklini inceleyelim.</p>
+<p>Öncelikle 1990 yılından bu yana yaşanmış depremlerin verisini <a href="https://deprem.afad.gov.tr/event-catalog">AFAD</a> internet sitesinden indirdim. Görünüşe göre veri Türkiye’de bulunan istasyonlar tarafından hissedilmiş bütün deprem kayıtlarını içeriyor. Dolayısıyla veriyi bir miktar işlemeniz gerekebilir. Ancak öncelikle verinin şeklini inceleyelim.</p>
 <p>Verimiz 402212 gözlem ve 10 değişkenden oluşuyor. Yani her satır bir deprem hareketini gösterirken, her sütün ise bu depremde gözlenen değişkenleri ifade ediyor.</p>
 <p>Sütun isimlerine bakarsak:</p>
 <div class="cell">
@@ -220,8 +214,16 @@ ul.task-list li input[type="checkbox"] {
 </div>
 </div>
 </div>
-<p>Gördüğünüz gibi bu depremlerin büyük bir kısmı aslında düşük şiddete sahip. Sadece 37 tanesi 6’nın üzerinde gerçekleşmiş. Tabii bu veriye, ülkemize yakın noktalarda gerçekleşmiş depremler de dahil. <strong>Doğanın politik sınırları yok.</strong></p>
-<p>Peki bu depremler nerelerde odaklanmış? Enlem ve boylam bilgisinin histogramını oluşturursak bunu rahatlıkla gösterebiliriz. <a href="#fig-lat-lon">Figür&nbsp;2</a>’da gösterilen histogramlardaki tepe noktaları, aslında hangi enlem ve boylamlarda en fazla depremin oluştuğunu göstermektedir.</p>
+<p>Gördüğünüz gibi bu depremlerin büyük bir kısmı aslında düşük şiddete sahip. Sadece 37 tanesi 6’nın üzerinde gerçekleşmiş. Tabii bu veriye, ülkemize yakın noktalarda gerçekleşmiş depremler de dahi: <strong>Doğanın politik sınırları yok.</strong></p>
+<p>Ancak bu veri büyük oranda gürültü içeriyor. Örnek vermek gerekirse 4’den düşük şiddete sahip depremler bizim için anlamlı olmayabilir. Bu yüzden öncelikle 4’den düşük depremleri filtreleyelim.</p>
+<div class="cell">
+
+</div>
+<div class="cell">
+
+</div>
+<p>Peki bu depremler nerelerde odaklanmış? Enlem ve boylam bilgisinin histogramını oluşturursak bunu rahatlıkla gösterebiliriz. <a href="#fig-lat-lon">Figür&nbsp;2</a>’da gösterilen histogramlardaki tepe noktaları, aslında hangi enlem ve boylamlarda en fazla depremin oluştuğunu göstermektedir. Neredeyse bütün enlemlerde deprem gözlenirken, aslında asıl farklılık boylamlarda. Depremler Ege, ve Doğu Anadolu kısımlarında yoğunlaşmış.</p>
+<p>Tabii ki burada 1990 öncesi depremler yok. Onlar da olsaydı daha farklı bir şeklimiz olurdu.</p>
 <div id="fig-lat-lon" class="cell quarto-layout-panel">
 <figure class="figure">
 <div class="quarto-layout-row quarto-layout-valign-top">
@@ -245,7 +247,7 @@ ul.task-list li input[type="checkbox"] {
 <p></p><figcaption class="figure-caption">Figür&nbsp;2: Depremlerin enlem ve boylamlara göre dağılımı</figcaption><p></p>
 </figure>
 </div>
-<p>Peki depremlerin oluştuğu derinlik ve depremin şiddeti arasında bir bağlantı var mı? Bunu da bir nokta grafiği kullanarak gösterebiliriz (<a href="#fig-depth-magnitude">Figür&nbsp;3</a>). Bu şekle baktığımızda aslında depremlerin çoğunlukla yüzeye yakın bölgelerde oluştuğunu görebiliriz. Ayrıca, yüzeye yakın olan depremlerin de şiddetinin büyük olma ihtimali oldukça fazla.</p>
+<p>Peki depremlerin oluştuğu derinlik ve depremin şiddeti arasında bir bağlantı var mı? Bunu da bir nokta grafiği kullanarak gösterebiliriz (<a href="#fig-depth-magnitude">Figür&nbsp;3</a>). Bu şekle baktığımızda aslında depremlerin çoğunlukla yüzeye yakın bölgelerde oluştuğunu görebiliriz. Ayrıca, yüzeye yakın olan depremlerin de şiddetli olma ihtimali bir hayli fazla.</p>
 <div class="cell">
 <div class="cell-output-display">
 <div id="fig-depth-magnitude" class="quarto-figure quarto-figure-center anchored">
@@ -256,11 +258,8 @@ ul.task-list li input[type="checkbox"] {
 </div>
 </div>
 </div>
-<p>Bu noktadan sonra veriyi sadeleştirmek için, 4’den küçük olan depremleri filtreledim. Filtrelenmiş veriyi artık Türkiye haritasına oturtabiliriz (<a href="#fig-all-quakes">Figür&nbsp;4</a>). Bu şekle baktığımızda aslında görmemiz gereken şey noktaların nerelerde yoğunlaştığı. Noktaların daha yoğun olduğu bögeler bize depremlerin de yoğun olarak oluştuğu yerleri göstermektedir.</p>
+<p>Bu noktadan sonra veriyi sadeleştirmek için, 4’den küçük olan depremleri filtreledim. Filtrelenmiş veriyi artık Türkiye haritasına oturtabiliriz (<a href="#fig-all-quakes">Figür&nbsp;4</a>). Bu şekle baktığımızda aslında görmemiz gereken şey noktaların nerelerde yoğunlaştığı. Noktaların daha yoğun olduğu bölgeler, bize depremlerin de yoğun olarak oluştuğu yerleri göstermektedir.</p>
 <p>Dikkat edersek, Kuzey Anadolu ve Doğu Anadolu fay hatları üzerinde yoğun bir deprem hareketliliği görülebilir.</p>
-<div class="cell">
-
-</div>
 <div class="cell">
 <div class="cell-output-display">
 <div id="fig-all-quakes" class="quarto-figure quarto-figure-center anchored">
@@ -271,7 +270,7 @@ ul.task-list li input[type="checkbox"] {
 </div>
 </div>
 </div>
-<p>Şimd haritayı biraz daha Türkiye üzerine odaklayalım ve depremlerin de büyüklüklerini ekleyelim. Bu sayede büyük depremlerin nerelerde olduğunu görebiliriz (<a href="#fig-quake-1">Figür&nbsp;5</a>). Bu şekilde, kırmızı noktaların yoğunluğu arttıkça, o bölgede güçlü bir deprem olduğu anlaşılmaktadır.</p>
+<p>Şimd haritayı biraz daha Türkiye üzerine odaklayalım ve depremlerin büyüklüklerini de görselleştirmeye ekleyelim. Bu sayede büyük depremlerin nerelerde olduğunu görebiliriz (<a href="#fig-quake-1">Figür&nbsp;5</a>). Bu şekilde, kırmızı noktaların yoğunluğu arttıkça, o bölgede güçlü bir deprem olduğu anlaşılmaktadır.</p>
 <div class="cell">
 <div class="cell-output-display">
 <div id="fig-quake-1" class="quarto-figure quarto-figure-center anchored">
@@ -286,7 +285,7 @@ ul.task-list li input[type="checkbox"] {
 </section>
 <section id="kahramanmaraş-depremi-ve-doğu-anadolu-fay-hattı" class="level1">
 <h1>Kahramanmaraş depremi ve Doğu Anadolu fay hattı</h1>
-<p>Ancak benim ilgilendiğim nokta şu an için Kahramanmaraş depremi. Şimdi biraz daha bu bölgeye odaklalanalım. Acaba fay hattı hangi yönlere doğru kırılmış olabilir? Küçük bir animasyonla bunu görselleştirebilriz. Eğer <a href="#fig-quake-2">Figür&nbsp;6</a>’e bakacak olursanız fay hattının nasıl bir şekilde kırıldığını daha rahat bir şekilde anlayabiliriz.</p>
+<p>Ancak benim ilgilendiğim nokta şu an için Kahramanmaraş depremi. Şimdi biraz daha bu bölgeye odaklalanalım. Acaba fay hattı hangi yönlere doğru kırılmış olabilir? Küçük bir animasyonla bunu görselleştirebilriz (<a href="#fig-quake-2">Figür&nbsp;6</a>). Harika! Önce ilk depremle kuzey-güney ekseninde kırılan fay hattı, daha sonra ikinci depremle doğu-batı ekseninde kırılmaya başlıyor.</p>
 <div class="cell">
 <div class="cell-output-display">
 <div id="fig-quake-2" class="quarto-figure quarto-figure-center anchored">
@@ -297,8 +296,9 @@ ul.task-list li input[type="checkbox"] {
 </div>
 </div>
 </div>
-<section id="doğu-anadolu-fayının-kırılması" class="level2">
-<h2 class="anchored" data-anchor-id="doğu-anadolu-fayının-kırılması">Doğu Anadolu fayının kırılması</h2>
+</section>
+<section id="doğu-anadolu-fayının-kırılması" class="level1">
+<h1>Doğu Anadolu fayının kırılması</h1>
 <p>Fay hatlarının doğudan batıya doğru kırıldığını haberlerden duymuşsunuzdur mutlaka. Küçük bir aramayla, Doğu Anadolu fayı üzerinde bulunan deprem serilerine ulaştım:</p>
 <ul>
 <li>Adana Ceyhan depremi (1998)</li>
@@ -317,23 +317,15 @@ ul.task-list li input[type="checkbox"] {
 </div>
 </div>
 </div>
-<p>Şekle baktığımızda gerçekten Doğu Anadolu fayı ekseninde bir hareketlilik göze çarpıyor.</p>
-<p>Bu hareketi daha iyi göstermek için bir animasyon daha oluşturalım (<a href="#fig-quake-4">Figür&nbsp;8</a>).</p>
-<div class="cell">
-<div class="cell-output-display">
-<div id="fig-quake-4" class="quarto-figure quarto-figure-center anchored">
-<figure class="figure">
-<p><img src="index_files/figure-html/fig-quake-4-1.gif" class="img-fluid figure-img"></p>
-<p></p><figcaption class="figure-caption">Figür&nbsp;8: Doğu Anadolu fay hattının kırılması</figcaption><p></p>
-</figure>
-</div>
-</div>
-</div>
-</section>
+<p>Şekle baktığımızda gerçekten Doğu Anadolu fayı ekseninde bir hareketlilik göze çarpıyor. 1998 yılındaki Adana depreminin ardından oluşan büyük depremler, doğu-batı ekseninde gerçekleşiyor.</p>
 </section>
 <section id="sonuç" class="level1">
 <h1>Sonuç</h1>
-<p>Sonuç olarak amacımıza ulaştık.</p>
+<p>Bu yazıyı yazma amacım aslında derin bir deprem incelemesi yapmak değildi - ki zaten uzmanlık alanım değil. Kamuya açık verileri kullanarak neler yapabiliriz onu görmek istedim. Buradaki görselleştirmelere daha da geliştirilebilir. O da sonraki yazıların konusu olsun.</p>
+</section>
+<section id="teşekkür" class="level1">
+<h1>Teşekkür</h1>
+<p>Animasyonlar için gerekli kodu oluşturan Arda Sevkar’a teşekkürler.</p>
 
 
 </section>
