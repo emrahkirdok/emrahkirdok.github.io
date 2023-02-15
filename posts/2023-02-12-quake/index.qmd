@@ -85,8 +85,13 @@ Ancak bu veri büyük oranda gürültü içeriyor. Örnek vermek gerekirse 4'den
 ```{r}
 #| label: filtering-params
 
-filtered <- NULL; for (i in seq(1,7)){filtered <- c(filtered, sum(data$Magnitude>=i))}
-filtered <- tibble(Magnitude=seq(1,7),Filtered=filter)
+filtered <- NULL
+for (i in seq(1,7)){
+  filtered <- c(filtered, sum(data$Magnitude>=i))
+  }
+
+filtered <- tibble(Magnitude=seq(1,7),Filtered=filtered)
+
 p <- ggplot(filtered,aes(x=Magnitude, y=Filtered)) + 
   geom_line() + 
   ggtitle("Deprem şiddetine göre verinin filtrasyonu", 
