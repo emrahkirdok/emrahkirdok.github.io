@@ -1,14 +1,14 @@
 ---
 title: "Kahramanmaraş Depremi"
 author: "Emrah Kırdök, Ph.D."
-date: "2023-02-13"
+date: "2023-02-15"
 categories: [Türkçe, Veri Analizi, Deprem, R, gganimate]
 image: "quake.gif"
 lang: tr
 execute:
     echo: false
     warning: false
-draft: false
+draft: true
 ---
 
 Geçtiğimiz haftanın nasıl geçtiğini anlayamadım. Son bir aydır, Avrupa Birliği tarafından desteklenen [NEOMATRIX](https://neomatrix.metu.edu.tr/) projesi kapsamında bir çalıştay hazırlığı içerisindeydik. Bu kapsamda, Stokholm, Paris ve Ankara'dan hocalar gelecek ve üzerinde çalıştığımız bir antik metagenomik analiz protokolü hakkında bir çalıştay gerçekleştirecektik.
@@ -17,13 +17,9 @@ Pazar akşamı ekip gelmiş, hazırlıklar olabildiğinde tamamlanmış ve artı
 
 Olayın bu kısmına çok fazla giremeyeceğim ancak sonuç olarak çalıştay ve bütün toplantılar iptal oldu. Yurtdışından gelen hocaları ise Ankara üzerinden ülkelerine ulaşmalarını sağladık. Hepimize geçmiş olsun.
 
-Ben de bir yandan ailemle ilgilenmek için telefon trafiği içerisindeyken, aklımın bir köşesinde **"Acaba ülkemizde gerçekleşen depremleri inceleyebilir miyiz?"** sorusu dönüyordu.
+Ben de bir yandan telefon trafiği içerisindeyken, aklımın bir köşesinde **"Acaba ülkemizde gerçekleşen depremleri inceleyebilir miyiz?"** sorusu dönüyordu.
 
-Tabii ki bir deprem bilimci ya da jeolog değilim. Bu konuda asla ahkam kesemem, ancak hali hazırda açık bir şekilde paylaşılan veriyi kullanarak bazı denemeler yapmakta özgürüm. Bu yazıda aşağıdaki temel noktalara odaklanmaya çalışacağım:
-
-1. Ülkemizin deprem kuşağında olduğunu göstermek
-2. Kahramanmaraş - ve Doğu Anadolu -  özelindeki depremlerin oluşma sırasını göstermek
-3. Bu bilgileri kullanarak eğitim materyali hazırlamak
+Tabii ki bir deprem bilimci ya da jeolog değilim. Bu konuda asla ahkam kesemem, ancak hali hazırda açık bir şekilde paylaşılan veriyi kullanarak bazı denemeler yapabiliriz. Bu yazıda amacım sadece ülkemizin bir deprem kuşağında olduğunu göstermek, ve depremlerin, fay hatları üzerinde nasıl hareket ettiğini görselleştirmek.
 
 ```{r setup, warnings = FALSE}
 
@@ -49,7 +45,7 @@ data <- data %>%
 
 # Genel görünüm
 
-Öncelikle 1990 yılından bu yana yaşanmış depremlerin verisini AFAD internet sitesinden indirdim. Görünüşe göre veri Türkiye'de bulunan istasyonlar tarafından hissedilmiş bütün deprem kayıtlarını içeriyor. Dolayısıyla veriyi bir miktar işlemeniz gerekebilir. Ancak öncelikle verinin şeklini inceleyelim.
+Öncelikle 1990 yılından bu yana yaşanmış depremlerin verisini [AFAD](https://deprem.afad.gov.tr/event-catalog) internet sitesinden indirdim. Görünüşe göre veri Türkiye'de bulunan istasyonlar tarafından hissedilmiş bütün deprem kayıtlarını içeriyor. Dolayısıyla veriyi bir miktar işlemeniz gerekebilir. Ancak öncelikle verinin şeklini inceleyelim.
 
 Verimiz `r nrow(data)` gözlem ve `r ncol(data)` değişkenden oluşuyor. Yani her satır bir deprem hareketini gösterirken, her sütün ise bu depremde gözlenen değişkenleri ifade ediyor.
 
@@ -59,15 +55,15 @@ Sütun isimlerine bakarsak:
 colnames(data)
 ```
 
-+ *Date:* Olayın tarihi
-+ *Longitude:* Boylam
-+ *Latitude:* Enlem
-+ *Depth:* Derinlik
-+ *Rms:* Algılanma süresi (saniye)
-+ *Type:* Ölçüm tipi
-+ *Magnitude:* Şiddet
-+ *Location:* Deprem bölgesi
-+ *EventID:* Depremin kodu
+-   *Date:* Olayın tarihi
+-   *Longitude:* Boylam
+-   *Latitude:* Enlem
+-   *Depth:* Derinlik
+-   *Rms:* Algılanma süresi (saniye)
+-   *Type:* Ölçüm tipi
+-   *Magnitude:* Şiddet
+-   *Location:* Deprem bölgesi
+-   *EventID:* Depremin kodu
 
 Bu bilgilere göre, ülkemiz istasyonları tarafından algılanan `r nrow(data)` tane deprem olmuş. Bu depremlerin şiddetlerini bir histogram olarak incelersek daha açıklayıcı olacaktır (@fig-plot).
 
@@ -82,9 +78,39 @@ ggplot(data,aes(x=Magnitude))+geom_histogram() +
     ggtitle("Depremler")
 ```
 
-Gördüğünüz gibi bu depremlerin büyük bir kısmı aslında düşük şiddete sahip. Sadece `r sum(data$Magnitude>=6)` tanesi 6'nın üzerinde gerçekleşmiş. Tabii bu veriye, ülkemize yakın noktalarda gerçekleşmiş depremler de dahil. **Doğanın politik sınırları yok.** 
+Gördüğünüz gibi bu depremlerin büyük bir kısmı aslında düşük şiddete sahip. Sadece `r sum(data$Magnitude>=6)` tanesi 6'nın üzerinde gerçekleşmiş. Tabii bu veriye, ülkemize yakın noktalarda gerçekleşmiş depremler de dahi: **Doğanın politik sınırları yok.**
 
-Peki bu depremler nerelerde odaklanmış? Enlem ve boylam bilgisinin histogramını oluşturursak bunu rahatlıkla gösterebiliriz. @fig-lat-lon'da gösterilen histogramlardaki tepe noktaları, aslında hangi enlem ve boylamlarda en fazla depremin oluştuğunu göstermektedir. 
+Ancak bu veri büyük oranda gürültü içeriyor. Örnek vermek gerekirse 4'den düşük şiddete sahip depremler bizim için anlamlı olmayabilir. Bu yüzden öncelikle 4'den düşük depremleri filtreleyelim.
+
+```{r}
+#| label: filtering-params
+
+filtered <- NULL; for (i in seq(1,7)){filtered <- c(filtered, sum(data$Magnitude>=i))}
+filtered <- tibble(Magnitude=seq(1,7),Filtered=filter)
+p <- ggplot(filtered,aes(x=Magnitude, y=Filtered)) + 
+  geom_line() + 
+  ggtitle("Deprem şiddetine göre verinin filtrasyonu", 
+          subtitle = "Belli bir noktadan sonra daha fazla filtrasyon yapmamıza gerek yok.") + 
+  xlab("Deprem şiddeti") + 
+  ylab("Filtrasyon sonrası kalan veri")
+
+ggsave("filtered.png", plot = p, device = "png")
+```
+
+```{r}
+#| label: prepare-data
+data <- data %>%
+  filter(Magnitude >= 4) %>%
+  mutate(index = 1:n()) %>%
+  arrange(index)
+
+range01 <- function(x){(x-min(x))/(max(x)-min(x))}
+data$alpha <- range01(data$Magnitude)
+```
+
+Peki bu depremler nerelerde odaklanmış? Enlem ve boylam bilgisinin histogramını oluşturursak bunu rahatlıkla gösterebiliriz. @fig-lat-lon'da gösterilen histogramlardaki tepe noktaları, aslında hangi enlem ve boylamlarda en fazla depremin oluştuğunu göstermektedir. Neredeyse bütün enlemlerde deprem gözlenirken, aslında asıl farklılık boylamlarda. Depremler Ege, ve Doğu Anadolu kısımlarında yoğunlaşmış.
+
+Tabii ki burada 1990 öncesi depremler yok. Onlar da olsaydı daha farklı bir şeklimiz olurdu.
 
 ```{r}
 #| label: fig-lat-lon 
@@ -94,11 +120,18 @@ Peki bu depremler nerelerde odaklanmış? Enlem ve boylam bilgisinin histogramı
 #|  - "Enlem"
 #|  - "Boylam"
 
-ggplot(data, aes(x=Latitude)) + geom_histogram() + ylab("Frekans") + xlab("Şiddet")
-ggplot(data, aes(x=Longitude)) + geom_histogram()  + ylab("Frekans") + xlab("Şiddet")
+ggplot(data, aes(x=Latitude)) + 
+  geom_histogram() + 
+  ylab("Frekans") + 
+  xlab("Enlem")
+
+ggplot(data, aes(x=Longitude)) + 
+  geom_histogram()  + 
+  ylab("Frekans") + 
+  xlab("Boylam")
 ```
 
-Peki depremlerin oluştuğu derinlik ve depremin şiddeti arasında bir bağlantı var mı? Bunu da bir nokta grafiği kullanarak gösterebiliriz (@fig-depth-magnitude). Bu şekle baktığımızda aslında depremlerin çoğunlukla yüzeye yakın bölgelerde oluştuğunu görebiliriz. Ayrıca, yüzeye yakın olan depremlerin de şiddetinin büyük olma ihtimali oldukça fazla.
+Peki depremlerin oluştuğu derinlik ve depremin şiddeti arasında bir bağlantı var mı? Bunu da bir nokta grafiği kullanarak gösterebiliriz (@fig-depth-magnitude). Bu şekle baktığımızda aslında depremlerin çoğunlukla yüzeye yakın bölgelerde oluştuğunu görebiliriz. Ayrıca, yüzeye yakın olan depremlerin de şiddetli olma ihtimali bir hayli fazla.
 
 ```{r}
 #| label: fig-depth-magnitude
@@ -106,19 +139,9 @@ Peki depremlerin oluştuğu derinlik ve depremin şiddeti arasında bir bağlant
 ggplot(data, aes(x=Depth, y=Magnitude)) + geom_point() + ylab("Şiddet") + xlab("Derinlik")
 ```
 
-Bu noktadan sonra veriyi sadeleştirmek için, 4'den küçük olan depremleri filtreledim. Filtrelenmiş veriyi artık Türkiye haritasına oturtabiliriz (@fig-all-quakes). Bu şekle baktığımızda aslında görmemiz gereken şey noktaların nerelerde yoğunlaştığı. Noktaların daha yoğun olduğu bögeler bize depremlerin de yoğun olarak oluştuğu yerleri göstermektedir.
+Bu noktadan sonra veriyi sadeleştirmek için, 4'den küçük olan depremleri filtreledim. Filtrelenmiş veriyi artık Türkiye haritasına oturtabiliriz (@fig-all-quakes). Bu şekle baktığımızda aslında görmemiz gereken şey noktaların nerelerde yoğunlaştığı. Noktaların daha yoğun olduğu bölgeler, bize depremlerin de yoğun olarak oluştuğu yerleri göstermektedir.
 
 Dikkat edersek, Kuzey Anadolu ve Doğu Anadolu fay hatları üzerinde yoğun bir deprem hareketliliği görülebilir.
-
-```{r}
-data <- data %>%
-  filter(Magnitude >= 4) %>%
-  mutate(index = 1:n()) %>%
-  arrange(index)
-
-range01 <- function(x){(x-min(x))/(max(x)-min(x))}
-data$alpha <- range01(data$Magnitude)
-```
 
 ```{r}
 #| label: fig-all-quakes
@@ -130,69 +153,59 @@ ggplot(data)+
   geom_point(aes(y = Latitude, x = Longitude), shape=21, alpha = 0.2)
 ```
 
-Şimd haritayı biraz daha Türkiye üzerine odaklayalım ve depremlerin de büyüklüklerini ekleyelim. Bu sayede büyük depremlerin nerelerde olduğunu görebiliriz (@fig-quake-1). Bu şekilde, kırmızı noktaların yoğunluğu arttıkça, o bölgede güçlü bir deprem olduğu anlaşılmaktadır.
+Şimd haritayı biraz daha Türkiye üzerine odaklayalım ve depremlerin büyüklüklerini de görselleştirmeye ekleyelim. Bu sayede büyük depremlerin nerelerde olduğunu görebiliriz (@fig-quake-1). Bu şekilde, kırmızı noktaların yoğunluğu arttıkça, o bölgede güçlü bir deprem olduğu anlaşılmaktadır.
 
 ```{r}
 #| label: fig-quake-1
 #| fig-cap: "Ülkemizde yaşanan 4 şiddetindeki büyük depremlerin " 
 ggplot(data)+
-  geom_map(data = world, map = world, aes(long, lat, map_id = region), fill = "white")+
+  geom_map(data = world, map = world, aes(long, lat, map_id = region), 
+           fill = "white")+
   coord_fixed(ratio = 1.2)+
   geom_point(aes(y = Latitude, x = Longitude, fill = Magnitude, size = Magnitude), 
     shape=21, color = "NA", alpha = data$alpha) +
   scale_fill_gradientn(colours = c("#15607a", "#7495a6", "#c7cdd1", "#cc734d", "#a63716")) + 
   xlim(c(25,45)) + ylim(c(35,42.5)) +
-  theme(legend.position = "node")
-  #theme(axis.text.x = element_blank(),
-  #      axis.title.x = element_blank(),
-  #      axis.text.y = element_blank(),
-  #      axis.ticks = element_blank(),
-  #      axis.title.y = element_blank(),
-  #      legend.text = element_text(face = "bold", size = 14.5),
-  #      legend.title = element_blank(),
-  #      legend.key = element_blank(),
-  #      title = element_text(face = "bold", size = 13),
-  #      panel.grid.major = element_blank(),
-  #      panel.grid.minor = element_blank(),
-  #      panel.background = element_rect(fill = "grey85")) +
-  #guides(size = "none")
+  theme(legend.position = "node") +
+  xlab("Boylam") + ylab("Enlem")
 ```
 
-Bu şekil bence Türkiye'nin gerçekten bir deprem bölgesi olduğu gerçeğini çok güzel bir şekide anlatıyor. Depremler Batı ve Doğu bölgelerimizde yoğunlaşmış durumda. Orta Anadolu'dan başlayarak, Akdeniz'in ortasına kadar inen bölgede ise fazla deprem görünmüyor. 
+Bu şekil bence Türkiye'nin gerçekten bir deprem bölgesi olduğu gerçeğini çok güzel bir şekide anlatıyor. Depremler Batı ve Doğu bölgelerimizde yoğunlaşmış durumda. Orta Anadolu'dan başlayarak, Akdeniz'in ortasına kadar inen bölgede ise fazla deprem görünmüyor.
 
 # Kahramanmaraş depremi ve Doğu Anadolu fay hattı
 
-Ancak benim ilgilendiğim nokta şu an için Kahramanmaraş depremi. Şimdi biraz daha bu bölgeye odaklalanalım. Acaba fay hattı hangi yönlere doğru kırılmış olabilir? Küçük bir animasyonla bunu görselleştirebilriz. Eğer @fig-quake-2'e bakacak olursanız fay hattının nasıl bir şekilde kırıldığını daha rahat bir şekilde anlayabiliriz.
+Ancak benim ilgilendiğim nokta şu an için Kahramanmaraş depremi. Şimdi biraz daha bu bölgeye odaklalanalım. Acaba fay hattı hangi yönlere doğru kırılmış olabilir? Küçük bir animasyonla bunu görselleştirebilriz (@fig-quake-2). Harika! Önce ilk depremle kuzey-güney ekseninde kırılan fay hattı, daha sonra ikinci depremle doğu-batı ekseninde kırılmaya başlıyor.
 
 ```{r}
 #| label: fig-quake-2
 #| fig-cap: "Kahramanmaraş bölgesinde yaşanan depremin animasyonu" 
+
 anim <- data %>% 
   filter(Date > as.Date("2023-02-06")) %>%
     ggplot()+
-      geom_map(data = world, map = world, aes(long, lat, map_id = region), fill = "white")+
+      geom_map(data = world, map = world, aes(long, lat, map_id = region), 
+               fill = "white")+
         coord_fixed(ratio = 1.2)+
       geom_point(aes(y = Latitude, x = Longitude, fill = Magnitude, size = Magnitude, alpha=alpha), 
         shape=21, color = "NA") +
-      transition_manual(Date, cumulative = T) +
       scale_fill_gradientn(colours = c("#15607a", "#7495a6", "#c7cdd1", "#cc734d", "#a63716")) + 
       xlim(c(25,45)) + ylim(c(35,42.5)) +
-      enter_fade() +
-      theme(legend.position = "node")
+      theme(legend.position = "node") + xlab("Boylam") + ylab("Enlem") +
+      transition_manual(Date, cumulative = T) 
 
 animate(anim, renderer=gifski_renderer())
 ```
 
-## Doğu Anadolu fayının kırılması
+# Doğu Anadolu fayının kırılması
 
 Fay hatlarının doğudan batıya doğru kırıldığını haberlerden duymuşsunuzdur mutlaka. Küçük bir aramayla, Doğu Anadolu fayı üzerinde bulunan deprem serilerine ulaştım:
 
-+ Adana Ceyhan depremi (1998)
-+ Bingöl depremi (2003)
-+ Elazığ depremleri (2003, 2010)
-+ Gaziantep Kahramanmaraş depremi (2023)
+-   Adana Ceyhan depremi (1998)
+-   Bingöl depremi (2003)
+-   Elazığ depremleri (2003, 2010)
+-   Gaziantep Kahramanmaraş depremi (2023)
 
-Acaba bu bilgiyi, elimizdeki veriyi kullanarak görselleştirebilir miyiz? Bunun için elimizdeki veriyi 1998 Adana Ceyhan depreminden sonraki depremleri içerecek şekilde filtreliyorum. Ayrıca depremleri sadece Doğu Anadolu fay hattını içerecek şekilde filtreliyorum ki deprem serisini daha rahat anlayalım (@fig-quake-3). 
+Acaba bu bilgiyi, elimizdeki veriyi kullanarak görselleştirebilir miyiz? Bunun için elimizdeki veriyi 1998 Adana Ceyhan depreminden sonraki depremleri içerecek şekilde filtreliyorum. Ayrıca depremleri sadece Doğu Anadolu fay hattını içerecek şekilde filtreliyorum ki deprem serisini daha rahat anlayalım (@fig-quake-3).
 
 ```{r}
 #| label: fig-quake-3
@@ -207,35 +220,18 @@ data %>%
         coord_fixed(ratio = 1.2)+
       geom_point(aes(y = Latitude, x = Longitude, fill = Magnitude, size = Magnitude, alpha=alpha), 
         shape=21, color = "NA") +
-      transition_manual(Date, cumulative = T) +
       scale_fill_gradientn(colours = c("#15607a", "#7495a6", "#c7cdd1", "#cc734d", "#a63716")) + 
       xlim(c(25,45)) + ylim(c(35,42.5)) +
-      theme(legend.position = "node")
+      theme(legend.position = "node") + xlab("Boylam") + ylab("Enlem") +
+      transition_manual(Date, cumulative = T) 
 ```
 
-Şekle baktığımızda gerçekten Doğu Anadolu fayı ekseninde bir hareketlilik göze çarpıyor.
-
-Bu hareketi daha iyi göstermek için bir animasyon daha oluşturalım (@fig-quake-4).
-
-```{r}
-#| label: fig-quake-4
-#| fig-cap: "Doğu Anadolu fay hattının kırılması" 
-data %>% 
-  filter(Date > as.Date("1998-06-27")) %>%
-  filter(Longitude > 35) %>%
-  filter(Longitude < 42.5) %>%
-  filter(Latitude < 40) %>%
-    ggplot()+
-      geom_map(data = world, map = world, aes(long, lat, map_id = region), fill = "white")+
-        coord_fixed(ratio = 1.2)+
-      geom_point(aes(y = Latitude, x = Longitude, fill = Magnitude, size = Magnitude, alpha=alpha), 
-       shape=20, color = "NA") +
-      transition_manual(Date, cumulative = F) +
-      scale_fill_gradientn(colours = c("#15607a", "#7495a6", "#c7cdd1", "#cc734d", "#a63716")) + 
-      xlim(c(25,45)) + ylim(c(35,42.5)) +
-      theme(legend.position = "node")
-```
+Şekle baktığımızda gerçekten Doğu Anadolu fayı ekseninde bir hareketlilik göze çarpıyor. 1998 yılındaki Adana depreminin ardından oluşan büyük depremler, doğu-batı ekseninde gerçekleşiyor.
 
 # Sonuç
 
-Sonuç olarak amacımıza ulaştık.
+Bu yazıyı yazma amacım aslında derin bir deprem incelemesi yapmak değildi - ki zaten uzmanlık alanım değil. Kamuya açık verileri kullanarak neler yapabiliriz onu görmek istedim. Buradaki görselleştirmelere daha da geliştirilebilir. O da sonraki yazıların konusu olsun.
+
+# Teşekkür
+
+Animasyonlar için gerekli kodu oluşturan Arda Sevkar'a teşekkürler.
