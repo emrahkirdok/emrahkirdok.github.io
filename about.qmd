@@ -2,14 +2,12 @@
 title: "About"
 image: profile.jpg
 about:
-  template: jolla
+  template: trestles
+  image-shape: round
   links:
     - icon: twitter
       text: Twitter
       href: https://twitter.com/emrahkirdok
-    - icon: linkedin
-      text: LinkedIn
-      href: https://linkedin.com
     - icon: github
       text: Github
       href: https://github.com/emrahkirdok
@@ -21,4 +19,12 @@ about:
 
 Hi!
 
-This is Emrah. I am an Assistant Prof. at Mersin University Department of Biotechnology.
+This is Emrah. I am an Assistant Prof. at Mersin University Department of Biotechnology. In this website I will be blogging about academia, data science, and ancient DNA.
+
+# Work Experience
+
+2019 - Current: Mersin University, Department of Biotechnology
+
+2018 - 2019: Stockholm University, Department of Archaelogy and Classical Studies
+
+2010 - 2016: Gebze Technical University, Department of Molecular Biology and Genetics
