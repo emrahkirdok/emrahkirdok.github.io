@@ -13,6 +13,10 @@ title-block-banner: true
 
 In this page you could find my blog posts. 
 
-Not too many content for now but I will write in Turkish and English. I will use Turkish when I try to explain some concepts to studends or general audience in Turkey. I will use English to write about academic concepts.
+Not too many content for now but I will write in Turkish and English. 
+
+I will use Turkish when I try to explain some concepts to studends or general audience in Turkey. 
+
+I will use English to write about academic concepts and in-depth data analysis posts.
 
 # Posts
