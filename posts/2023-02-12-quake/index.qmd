@@ -2,7 +2,7 @@
 title: "Kahramanmaraş Depremi"
 author: "Emrah Kırdök, Ph.D."
 date: "2023-02-15"
-categories: [Türkçe, Veri Analizi, Deprem, R]
+categories: [türkçe, veri-analizi, deprem, R, mersin]
 image: "quake.gif"
 lang: tr
 execute:
