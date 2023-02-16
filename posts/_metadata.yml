@@ -6,3 +6,7 @@ freeze: auto
 
 # Enable banner style title blocks
 title-block-banner: true
+
+comments: 
+  utterances: 
+    repo:  emrahkirdok/blog-comments
