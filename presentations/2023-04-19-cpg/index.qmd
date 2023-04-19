@@ -165,7 +165,7 @@ It is even more complicated in a real situation:
 
 ![It would be very hard to authenticate one by one](images/authentication.png)
 
-# Workflow
+# Workflows
 
 ## Workflows
 
@@ -193,7 +193,12 @@ My first workflow.
 + Snakemake changed my view
 + A fully robust system that can automatically send slurm jobs
 
+## Snakemake
 
+![](images/snake.png)
+
+
+# Extras
 
 ## Helps you to keep a tidy folder
 
@@ -230,19 +235,7 @@ A tidy folder keep your research trackable and reproducible.
 
 :::
 
-## Documenting
-
-+ I generally place a `README.md` file
-+ I generally write on markdown
-+ Documenting is crucial in bioinformatics
-
-::: {.notes}
-
-If you keep documenting your steps, it will be easy to reproducec results after a long time. Also
-
-:::
-
-## Use Github
+## Available on Github
 
 + Version controlling 
 + Share an collaborate
