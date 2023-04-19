@@ -42,78 +42,78 @@
     "text": "At Aykut Kence Evolution Meeting 2022, I presented a talk named What does Ancient human microbes tell us? The talk is in Turkish.\n\nvideo"
   },
   {
-    "objectID": "presentations/2023-04-19-cpg/presentation.html",
-    "href": "presentations/2023-04-19-cpg/presentation.html",
+    "objectID": "presentations/2023-04-19-cpg/index.html",
+    "href": "presentations/2023-04-19-cpg/index.html",
     "title": "My Experience on Metagenomics and Workflows",
     "section": "",
     "text": "Emrah Kırdök, Ph.D.\nI am trained as a biologist\nWorking on ancient metagenomics\nGiving lectures on bioinformatics and data analysis\n\n\nHi I am Emrah Kırdök. I am working at Mersin University Department of Biotechnology as an Assistant Prof. \nCurrently, I am working on ancient metagenomics and bioinformatics.\nAlso I am teaching bioinformatics and data analysis at graduate and undergraduate level."
   },
   {
-    "objectID": "presentations/2023-04-19-cpg/presentation.html#what-am-i-going-to-talk",
-    "href": "presentations/2023-04-19-cpg/presentation.html#what-am-i-going-to-talk",
+    "objectID": "presentations/2023-04-19-cpg/index.html#what-am-i-going-to-talk",
+    "href": "presentations/2023-04-19-cpg/index.html#what-am-i-going-to-talk",
     "title": "My Experience on Metagenomics and Workflows",
     "section": "What am I going to talk?",
     "text": "What am I going to talk?\n\nMy experience on bioinformatics and metagenomics\nSimple tricks that I used\nHow aMeta helped me to understand snakemake\nMy ideas on reproducible pipelines with snakemake\nHopefully, you will get an idea\n\n\nI am trained as a biologist. After my Ph.D., I moved to bioinformaitcs and ancient metagenomics field.\nIn this presentation, I will talk about by experiences in bioinformtics filed, in a life scientist perspective.\nToday, bioinformatics is mostly done by trial and error since there are vast amounts of tools and methods. So, you run something, you observe, you fix and run again.\nThis doing and learning process could be sometimes very confusing, espacially if you are new to bioinformatics.\nBut there are some tricks and tips that make your life easier in the long run. In this presentation I will explain you my experience on organizing bioinformatic projects, keeping a tidy folder."
   },
   {
-    "objectID": "presentations/2023-04-19-cpg/presentation.html#bioinformatics-methdodology",
-    "href": "presentations/2023-04-19-cpg/presentation.html#bioinformatics-methdodology",
+    "objectID": "presentations/2023-04-19-cpg/index.html#bioinformatics-methdodology",
+    "href": "presentations/2023-04-19-cpg/index.html#bioinformatics-methdodology",
     "title": "My Experience on Metagenomics and Workflows",
     "section": "Bioinformatics methdodology",
     "text": "Bioinformatics methdodology\nThe very basic idea of the bioinformatics:\n\n\n\n\n\n\n\ng\n\n  \n\ninput\n\n Input   \n\ntool\n\n Tool   \n\ninput->tool\n\n    \n\noutput\n\n Output   \n\ntool->output\n\n   \n\n\n\n\n\n\nI was basically a fish out of the sea when I first started working on bioinformatics.\nThe very first thing I learned is that, every tool takes an input and produces an output. This idea was very straightforward when using bash.\nYou’ll simply write your command line and check wait until the program terminates. Often you will get an error message, that you need to debug. After you fix all the errors, then you program will work as expected, and you will have an output."
   },
   {
-    "objectID": "presentations/2023-04-19-cpg/presentation.html#bioinformatics-methdodology-1",
-    "href": "presentations/2023-04-19-cpg/presentation.html#bioinformatics-methdodology-1",
+    "objectID": "presentations/2023-04-19-cpg/index.html#bioinformatics-methdodology-1",
+    "href": "presentations/2023-04-19-cpg/index.html#bioinformatics-methdodology-1",
     "title": "My Experience on Metagenomics and Workflows",
     "section": "Bioinformatics methdodology",
     "text": "Bioinformatics methdodology\nGenerally it is more complicated…\n\n\n\n\n\n\n\ng\n\n  \n\ninput1\n\n Input1   \n\ntool\n\n Tool   \n\ninput1->tool\n\n    \n\ninput2\n\n Input2   \n\ninput2->tool\n\n    \n\nparameters\n\n parameters   \n\nparameters->tool\n\n    \n\noutput1\n\n Output1   \n\ntool->output1\n\n    \n\noutput2\n\n Output2   \n\ntool->output2\n\n   \n\n\n\n\n\n\nHowever, generally it is more complicated. You will have more than one input and more then one ouputs. Often, you will have some parameters to fine tune."
   },
   {
-    "objectID": "presentations/2023-04-19-cpg/presentation.html#bioinformatics-methdodology-2",
-    "href": "presentations/2023-04-19-cpg/presentation.html#bioinformatics-methdodology-2",
+    "objectID": "presentations/2023-04-19-cpg/index.html#bioinformatics-methdodology-2",
+    "href": "presentations/2023-04-19-cpg/index.html#bioinformatics-methdodology-2",
     "title": "My Experience on Metagenomics and Workflows",
     "section": "Bioinformatics methdodology",
     "text": "Bioinformatics methdodology\nActually it is much more complicated…\n\n\n\n\n\n\n\ng\n\n  \n\ninput1\n\n Input1   \n\ntool1\n\n Tool1   \n\ninput1->tool1\n\n    \n\ninput2\n\n Input2   \n\ninput2->tool1\n\n    \n\nparameters\n\n parameters   \n\nparameters->tool1\n\n    \n\noutput1\n\n Output1   \n\ntool1->output1\n\n    \n\noutput2\n\n Output2   \n\ntool1->output2\n\n    \n\ntool2\n\n Tool2   \n\noutput2->tool2\n\n    \n\noutput3\n\n Output3   \n\ntool2->output3\n\n    \n\nmoreparameters\n\n moreparameters   \n\nmoreparameters->tool2\n\n   \n\n\n\n\n\n\nThe core idea of bioinformatics methodology is to combine several tools into one neat workflow.\nBut it is much more complicated then that. To do a bionformatics research, you’ll need to use a lot of different tools, a lot of files, different paramters.\nOften you’ll need to optimize parameters to get the correct result.\nThis is the general idea of bioinformatics work style."
   },
   {
-    "objectID": "presentations/2023-04-19-cpg/presentation.html#documenting-is-everything",
-    "href": "presentations/2023-04-19-cpg/presentation.html#documenting-is-everything",
+    "objectID": "presentations/2023-04-19-cpg/index.html#documenting-is-everything",
+    "href": "presentations/2023-04-19-cpg/index.html#documenting-is-everything",
     "title": "My Experience on Metagenomics and Workflows",
     "section": "Documenting is everything",
     "text": "Documenting is everything\nThen you’ll create bash scripts to automate your codes.\n\n\n\nA simple bash script"
   },
   {
-    "objectID": "presentations/2023-04-19-cpg/presentation.html#documenting-is-everything-1",
-    "href": "presentations/2023-04-19-cpg/presentation.html#documenting-is-everything-1",
+    "objectID": "presentations/2023-04-19-cpg/index.html#documenting-is-everything-1",
+    "href": "presentations/2023-04-19-cpg/index.html#documenting-is-everything-1",
     "title": "My Experience on Metagenomics and Workflows",
     "section": "Documenting is everything",
     "text": "Documenting is everything\nSoon you’ll have a folder full of results, bash scripts, and other stuff.\n\n\n\nThe folder that you have\n\n\n\nSoon you will have a folder full of results. Then it becomes very tricky to find your way in these big folders. You need to document"
   },
   {
-    "objectID": "presentations/2023-04-19-cpg/presentation.html#you-also-delete-stuff",
-    "href": "presentations/2023-04-19-cpg/presentation.html#you-also-delete-stuff",
+    "objectID": "presentations/2023-04-19-cpg/index.html#you-also-delete-stuff",
+    "href": "presentations/2023-04-19-cpg/index.html#you-also-delete-stuff",
     "title": "My Experience on Metagenomics and Workflows",
     "section": "You also delete stuff!",
     "text": "You also delete stuff!\n\nAlso, sometimes you can delete stuff\nUse rm very carefully!\nMake data read only!"
   },
   {
-    "objectID": "presentations/2023-04-19-cpg/presentation.html#lessons-learnt",
-    "href": "presentations/2023-04-19-cpg/presentation.html#lessons-learnt",
+    "objectID": "presentations/2023-04-19-cpg/index.html#lessons-learnt",
+    "href": "presentations/2023-04-19-cpg/index.html#lessons-learnt",
     "title": "My Experience on Metagenomics and Workflows",
     "section": "Lessons learnt",
     "text": "Lessons learnt\n\nKeep a tidy folder\nAlways document your code\nWell organized\nmake raw data read only!\nWorkflowing\n\nreproduce your results\n\n\n\nSo, at this stage I learnd the importance of keeping a tidy folder and keeping track of my codes. I always write my codes in bash scripts and also document the idea in the project.\nWhen yoy want to work on this project after 10 years, you need to remember the codes. So documentation is important.\nAlso, make your data read only. If you keep your scripts and results intact, you can reproducce the results any time you want."
   },
   {
-    "objectID": "presentations/2023-04-19-cpg/presentation.html#keeping-a-tidy-folder",
-    "href": "presentations/2023-04-19-cpg/presentation.html#keeping-a-tidy-folder",
+    "objectID": "presentations/2023-04-19-cpg/index.html#keeping-a-tidy-folder",
+    "href": "presentations/2023-04-19-cpg/index.html#keeping-a-tidy-folder",
     "title": "My Experience on Metagenomics and Workflows",
     "section": "Keeping a tidy folder",
     "text": "Keeping a tidy folder\nA folder explanation:\nproject\n    |----- data\n    |----- scripts\n    |----- results\n    |----- reports\n    |----- README.md\n\nA tidy folder keep your research fast."
   },
   {
-    "objectID": "presentations/2023-04-19-cpg/presentation.html#document-stuff",
-    "href": "presentations/2023-04-19-cpg/presentation.html#document-stuff",
+    "objectID": "presentations/2023-04-19-cpg/index.html#document-stuff",
+    "href": "presentations/2023-04-19-cpg/index.html#document-stuff",
     "title": "My Experience on Metagenomics and Workflows",
     "section": "Document stuff",
     "text": "Document stuff\n\nI generally place a README.md file\nI generally write on markdown\ndocumenting is everyhting!\n\n\nIf you keep documenting your steps, it will be easy to reproducec results after a long time. Also"
