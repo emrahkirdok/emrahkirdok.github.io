@@ -32,7 +32,7 @@ jobs:
       - name: Render to html
         # Add any command line argument needed
         run: |
-          quarto render --to html
+          quarto render
           
       - name: Render and Publish
         uses: quarto-dev/quarto-actions/publish@v2
