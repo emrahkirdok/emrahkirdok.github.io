@@ -9,8 +9,6 @@ format:
         slide-number: true
         footer: "aMeta Workshop"
         embed-resources: true
-
-
 ---
 
 ## Who am I?
