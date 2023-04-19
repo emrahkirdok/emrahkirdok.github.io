@@ -4,7 +4,12 @@ institue: "Mersin University, Department of Biotechnology"
 subtitle: "aMeta Workhsop"
 author: "Emrah Kırdök, Ph.D."
 date: "19-04-2023"
-format: pptx
+format:
+    revealjs:
+        slide-number: true
+        footer: "aMeta Workshop"
+        embed-resources: true
+
 
 ---
 
