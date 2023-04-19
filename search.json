@@ -91,8 +91,8 @@
     "text": "Authentication part of the pipeline\n\nIt would be very hard to authenticate one by one"
   },
   {
-    "objectID": "presentations/2023-04-19-cpg/index.html#workflows",
-    "href": "presentations/2023-04-19-cpg/index.html#workflows",
+    "objectID": "presentations/2023-04-19-cpg/index.html#workflows-1",
+    "href": "presentations/2023-04-19-cpg/index.html#workflows-1",
     "title": "My Experience on Metagenomics and Workflows",
     "section": "Workflows",
     "text": "Workflows\n\nBash scripts are quite easy to write\nBut, every time you run it starts from beginning\nEvery bash script could be specific to one job\nJob dependency (with slurm?)"
@@ -112,6 +112,13 @@
     "text": "Snakemake\n\naMeta allowed me to learn snakemake\nSnakemake changed my view\nA fully robust system that can automatically send slurm jobs"
   },
   {
+    "objectID": "presentations/2023-04-19-cpg/index.html#snakemake-1",
+    "href": "presentations/2023-04-19-cpg/index.html#snakemake-1",
+    "title": "My Experience on Metagenomics and Workflows",
+    "section": "Snakemake",
+    "text": "Snakemake"
+  },
+  {
     "objectID": "presentations/2023-04-19-cpg/index.html#helps-you-to-keep-a-tidy-folder",
     "href": "presentations/2023-04-19-cpg/index.html#helps-you-to-keep-a-tidy-folder",
     "title": "My Experience on Metagenomics and Workflows",
@@ -119,17 +126,10 @@
     "text": "Helps you to keep a tidy folder\nProject name\n├── LICENSE\n├── README.md          <- The top-level README for developers using this project.\n├── data\n│   ├── external       <- Data from third party sources.\n│   ├── interim        <- Intermediate data that has been transformed.\n│   ├── processed      <- The final, canonical data sets for modeling.\n│   └── raw            <- The original read only\n│\n├── docs               <- All the document information should go here\n│   ├── reports\n│   └── presentations\n│\n├── workflow           <- Source code and snakemake rules \n│   ├── Snakefile      <- A snakefile, should include all sub rules\n│   │\n│   ├── rules          <- Seperate snakefile rules\n│   │\n│   ├── environments   <- Conda environments\n│   │\n│   └── singularity    <- Singularity containers\n│ \n└── results\n\n\nA tidy folder keep your research trackable and reproducible."
   },
   {
-    "objectID": "presentations/2023-04-19-cpg/index.html#documenting",
-    "href": "presentations/2023-04-19-cpg/index.html#documenting",
+    "objectID": "presentations/2023-04-19-cpg/index.html#available-on-github",
+    "href": "presentations/2023-04-19-cpg/index.html#available-on-github",
     "title": "My Experience on Metagenomics and Workflows",
-    "section": "Documenting",
-    "text": "Documenting\n\nI generally place a README.md file\nI generally write on markdown\nDocumenting is crucial in bioinformatics\n\n\nIf you keep documenting your steps, it will be easy to reproducec results after a long time. Also"
-  },
-  {
-    "objectID": "presentations/2023-04-19-cpg/index.html#use-github",
-    "href": "presentations/2023-04-19-cpg/index.html#use-github",
-    "title": "My Experience on Metagenomics and Workflows",
-    "section": "Use Github",
-    "text": "Use Github\n\nVersion controlling\nShare an collaborate\nAlso help you to backup\n\n\n\naMeta Workshop"
+    "section": "Available on Github",
+    "text": "Available on Github\n\nVersion controlling\nShare an collaborate\nAlso help you to backup\n\n\n\naMeta Workshop"
   }
 ]
