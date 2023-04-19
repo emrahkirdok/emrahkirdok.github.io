@@ -42,115 +42,94 @@
     "text": "At Aykut Kence Evolution Meeting 2022, I presented a talk named What does Ancient human microbes tell us? The talk is in Turkish.\n\nvideo"
   },
   {
-    "objectID": "presentations/2023-04-19-cpg/index.html",
-    "href": "presentations/2023-04-19-cpg/index.html",
-    "title": "Emrah Kırdök",
-    "section": "",
-    "text": "Emrah Kırdök, Ph.D.\nTrained as a biologist\nWorking on ancient metagenomics\nGiving lectures on bioinformatics and data analysis\n\n\nHi I am Emrah Kırdök. I think most of you already know me. I am working at Mersin University, deparment of biotechnology. Currently, I am working on ancient metagenomics and bioinformatics. Also I am teaching bioinformatics and data analysis at graduate and undergraduate level.\nNora and Zoe asked me to present some of my experiences and struggles in ancient metagenomics studies and how aMeta helped me to deal these.\nAfter some thought, I’ve come up with this presentation."
+    "objectID": "presentations/2023-04-19-cpg/index.html#who-am-i",
+    "href": "presentations/2023-04-19-cpg/index.html#who-am-i",
+    "title": "My Experience on Metagenomics and Workflows",
+    "section": "Who am I?",
+    "text": "Who am I?\n\nEmrah Kırdök, Ph.D.\nTrained as a biologist\nWorking on ancient metagenomics\nGiving lectures on bioinformatics and data analysis\n\n\nHi I am Emrah Kırdök. I think most of you already know me. I am working at Mersin University, deparment of biotechnology. Currently, I am working on ancient metagenomics and bioinformatics. Also I am teaching bioinformatics and data analysis at graduate and undergraduate level.\nNora and Zoe asked me to present some of my experiences and struggles in ancient metagenomics studies and how aMeta helped me to deal these.\nAfter some thought, I’ve come up with this presentation."
   },
   {
     "objectID": "presentations/2023-04-19-cpg/index.html#outline",
     "href": "presentations/2023-04-19-cpg/index.html#outline",
-    "title": "Emrah Kırdök",
+    "title": "My Experience on Metagenomics and Workflows",
     "section": "Outline",
     "text": "Outline\n\nAncient metagenomics is still a new discipline\nWe do not have very well defined methods\nSome struggle is inevitable\nLessons learnt, some good practice and tricks\nHow aMeta helped me to understand snakemake\n\n\nTrained as a biologist, I moved to bioinformatics and ancient metagenomics field after my Ph.D. studies. However, this change was not really easy.\nBioinformatics is mostly done by trial and error. So, you run something, you observe, you fix and run again. And even ancient metagenomics is particularly hard, since it is still a young filed. There are just a handful of methods out there, and in most occasions you’ll have to get your hands dirty.\nBut there are some tricks and tips that make your life easier in the long run. In this presentation I will explain you my experience on ancient metagenomics from the start and show you some tricks."
   },
   {
     "objectID": "presentations/2023-04-19-cpg/index.html#bioinformatics-methdodology",
     "href": "presentations/2023-04-19-cpg/index.html#bioinformatics-methdodology",
-    "title": "Emrah Kırdök",
+    "title": "My Experience on Metagenomics and Workflows",
     "section": "Bioinformatics methdodology",
-    "text": "Bioinformatics methdodology\nA simple methodlogy\n\n\n\n\n\n\n\ng\n\n  \n\ninput1\n\n Input1   \n\ntool\n\n Tool   \n\ninput1->tool\n\n    \n\ninput2\n\n Input2   \n\ninput2->tool\n\n    \n\nparameters\n\n parameters   \n\nparameters->tool\n\n    \n\noutput1\n\n Output1   \n\ntool->output1\n\n    \n\noutput2\n\n Output2   \n\ntool->output2\n\n   \n\n\n\n\n\n\nHowever, generally it is more complicated. You will have more than one input and more then one outputs. Often, you will have some parameters to fine tune."
+    "text": "Bioinformatics methdodology\nA simple methodology\n\n\n\n\n\n\n\ng\n\n  \n\ninput1\n\n Input1   \n\ntool\n\n Tool   \n\ninput1->tool\n\n    \n\ninput2\n\n Input2   \n\ninput2->tool\n\n    \n\nparameters\n\n parameters   \n\nparameters->tool\n\n    \n\noutput1\n\n Output1   \n\ntool->output1\n\n    \n\noutput2\n\n Output2   \n\ntool->output2\n\n   \n\n\n\n\n\n\nHowever, generally it is more complicated. You will have more than one input and more then one outputs. Often, you will have some parameters to fine tune."
   },
   {
     "objectID": "presentations/2023-04-19-cpg/index.html#bioinformatics-methdodology-1",
     "href": "presentations/2023-04-19-cpg/index.html#bioinformatics-methdodology-1",
-    "title": "Emrah Kırdök",
+    "title": "My Experience on Metagenomics and Workflows",
     "section": "Bioinformatics methdodology",
     "text": "Bioinformatics methdodology\nActually it is much more complicated…\n\n\n\n\n\n\n\ng\n\n  \n\ninput1\n\n Input1   \n\ntool1\n\n Tool1   \n\ninput1->tool1\n\n    \n\ninput2\n\n Input2   \n\ninput2->tool1\n\n    \n\nparameters\n\n parameters   \n\nparameters->tool1\n\n    \n\noutput1\n\n Output1   \n\ntool1->output1\n\n    \n\noutput2\n\n Output2   \n\ntool1->output2\n\n    \n\ntool2\n\n Tool2   \n\noutput2->tool2\n\n    \n\noutput3\n\n Output3   \n\ntool2->output3\n\n    \n\nmoreparameters\n\n moreparameters   \n\nmoreparameters->tool2\n\n   \n\n\n\n\n\n\nThe core idea of bioinformatics methodology is to combine several tools into one neat workflow.\nBut it is much more complicated then that. To do a bionformatics research, you’ll need to use a lot of different tools, a lot of files, different paramters.\nOften you’ll need to optimize parameters to get the correct result.\nThis is the general idea of bioinformatics work style."
   },
   {
     "objectID": "presentations/2023-04-19-cpg/index.html#ancient-metagenomics-methodology",
     "href": "presentations/2023-04-19-cpg/index.html#ancient-metagenomics-methodology",
-    "title": "Emrah Kırdök",
+    "title": "My Experience on Metagenomics and Workflows",
     "section": "Ancient metagenomics methodology",
-    "text": "Ancient metagenomics methodology\nAnd in ancient metagenomics, it is much more complicated…\n\n\n\n\n\n\n\ng\n\n  \n\nfastq\n\n Fastq file   \n\nclassification\n\n Classification   \n\nfastq->classification\n\n    \n\noutput\n\n Classification Output   \n\nauthentication\n\n Extract aDNA reads and authenticate   \n\noutput->authentication\n\n    \n\nclassification->output\n\n    \n\nauthentication_1\n\n authentication_1   \n\nauthentication->authentication_1\n\n    \n\nauthentication_2\n\n authentication_2   \n\nauthentication->authentication_2\n\n    \n\nauthentication_3\n\n authentication_3   \n\nauthentication->authentication_3\n\n    \n\nauthentication_4\n\n authentication_4   \n\nauthentication->authentication_4\n\n    \n\nauthentication_N\n\n authentication_N   \n\nauthentication->authentication_N\n\n    \n\ndatabase\n\n database   \n\ndatabase->classification\n\n    \n\ndatabase->authentication\n\n   \n\n\n\n\n\n\nAnd in ancient metagenomics, this is much more harder. Generally, we classify DNA reads in fastq files using a reference sequence collection. THis collection contains DNA sequences that have known taxonomical ranks. By comparing each sequence to this collection, we try to identify the taxonomic origin of each DNA read.\nHowever, in ancient metaggneomics, we also need to extract DNA sequences and authenticate the ancient status. So, at the end we do not know how many bacteria we have."
+    "text": "Ancient metagenomics methodology\nAnd in ancient metagenomics, it is much more complicated…\n\n\n\n\n\n\n\ng\n\n  \n\nfastq\n\n Fastq file   \n\nclassification\n\n Classification   \n\nfastq->classification\n\n    \n\noutput\n\n Classification Output   \n\nauthentication\n\n Extract aDNA reads and authenticate   \n\noutput->authentication\n\n    \n\nclassification->output\n\n    \n\nauthentication_1\n\n authentication_1   \n\nauthentication->authentication_1\n\n    \n\nauthentication_2\n\n authentication_2   \n\nauthentication->authentication_2\n\n    \n\nauthentication_3\n\n authentication_3   \n\nauthentication->authentication_3\n\n    \n\nauthentication_4\n\n authentication_4   \n\nauthentication->authentication_4\n\n    \n\nauthentication_N\n\n authentication_N   \n\nauthentication->authentication_N\n\n    \n\ndatabase\n\n database   \n\ndatabase->classification\n\n    \n\ndatabase->authentication\n\n    \n\nFinal Report\n\n Final Report   \n\nauthentication_1->Final Report\n\n    \n\nauthentication_2->Final Report\n\n    \n\nauthentication_3->Final Report\n\n    \n\nauthentication_4->Final Report\n\n    \n\nauthentication_N->Final Report\n\n   \n\n\n\n\n\n\nAnd in ancient metagenomics, this is much more harder. Generally, we classify DNA reads in fastq files using a reference sequence collection. THis collection contains DNA sequences that have known taxonomical ranks. By comparing each sequence to this collection, we try to identify the taxonomic origin of each DNA read.\nHowever, in ancient metaggneomics, we also need to extract DNA sequences and authenticate the ancient status. So, at the end we do not know how many bacteria we have."
   },
   {
     "objectID": "presentations/2023-04-19-cpg/index.html#ancient-metagenomics-methodology-1",
     "href": "presentations/2023-04-19-cpg/index.html#ancient-metagenomics-methodology-1",
-    "title": "Emrah Kırdök",
+    "title": "My Experience on Metagenomics and Workflows",
     "section": "Ancient metagenomics methodology",
-    "text": "Ancient metagenomics methodology\nIt is even more complicated in a real situation:\n\n\n\nThe aMeta Workflow"
+    "text": "Ancient metagenomics methodology\nIt is even more complicated in a real situation:\n\nThe aMeta Workflow"
   },
   {
-    "objectID": "presentations/2023-04-19-cpg/index.html#what-you-will-end-up",
-    "href": "presentations/2023-04-19-cpg/index.html#what-you-will-end-up",
-    "title": "Emrah Kırdök",
-    "section": "What you will end up?",
-    "text": "What you will end up?\n\nSoon, you will have a big folder filled with data\n\n\n\n\nThe folder that you have\n\n\n\nSoon you will have a folder full of results. Then it becomes very tricky to find your way in these big folders. This is one of the earliest folder that I work.\nActualy I really don’t know what is going in here :)"
+    "objectID": "presentations/2023-04-19-cpg/index.html#authentication-part-of-the-pipeline",
+    "href": "presentations/2023-04-19-cpg/index.html#authentication-part-of-the-pipeline",
+    "title": "My Experience on Metagenomics and Workflows",
+    "section": "Authentication part of the pipeline",
+    "text": "Authentication part of the pipeline\n\nIt would be very hard to authenticate one by one"
   },
   {
-    "objectID": "presentations/2023-04-19-cpg/index.html#sometimes-you-delete-things",
-    "href": "presentations/2023-04-19-cpg/index.html#sometimes-you-delete-things",
-    "title": "Emrah Kırdök",
-    "section": "Sometimes you delete things",
-    "text": "Sometimes you delete things\n\nAlso, sometimes you can delete stuff\nUse rm very carefully!\nThis unfortunately happens…\n\n\nAnd most of the times, you also delete some stuff."
+    "objectID": "presentations/2023-04-19-cpg/index.html#workflows",
+    "href": "presentations/2023-04-19-cpg/index.html#workflows",
+    "title": "My Experience on Metagenomics and Workflows",
+    "section": "Workflows",
+    "text": "Workflows\n\nBash scripts are quite easy to write\nBut, every time you run it starts from beginning\nEvery bash script could be specific to one job\nJob dependency (with slurm?)"
   },
   {
-    "objectID": "presentations/2023-04-19-cpg/index.html#lessons-learnt-1",
-    "href": "presentations/2023-04-19-cpg/index.html#lessons-learnt-1",
-    "title": "Emrah Kırdök",
-    "section": "Lessons learnt",
-    "text": "Lessons learnt\n\nKeeping a tidy folder\nAlways document your code\nMake raw data read only!\nUsing a workflowing tool (snakemake)\n\n\nSo, at this stage I learnd the importance of keeping a tidy folder and keeping track of my codes. I always write my codes in bash scripts and also document the idea in the project.\nWhen yoy want to work on this project after 10 years, you need to remember the codes. So documentation is important.\nAlso, make your data read only. If you keep your scripts and results intact, you can reproducce the results any time you want."
+    "objectID": "presentations/2023-04-19-cpg/index.html#my-first-workflow",
+    "href": "presentations/2023-04-19-cpg/index.html#my-first-workflow",
+    "title": "My Experience on Metagenomics and Workflows",
+    "section": "My first workflow",
+    "text": "My first workflow\n\n\nMy first workflow.\n\nvery fast\ncompletely on bash\ncan preserve job dependencies\nbut it runs from the beginning"
   },
   {
-    "objectID": "presentations/2023-04-19-cpg/index.html#diagrams-might-be-helpful",
-    "href": "presentations/2023-04-19-cpg/index.html#diagrams-might-be-helpful",
-    "title": "Emrah Kırdök",
-    "section": "Diagrams might be helpful",
-    "text": "Diagrams might be helpful\n\nI try to teach bioinformatics using diagrams\nKeeping a track of input and outputs is essential\n\n\nThe exam from a student"
+    "objectID": "presentations/2023-04-19-cpg/index.html#snakemake",
+    "href": "presentations/2023-04-19-cpg/index.html#snakemake",
+    "title": "My Experience on Metagenomics and Workflows",
+    "section": "Snakemake",
+    "text": "Snakemake\n\naMeta allowed me to learn snakemake\nSnakemake changed my view\nA fully robust system that can automatically send slurm jobs"
   },
   {
-    "objectID": "presentations/2023-04-19-cpg/index.html#keeping-a-tidy-folder",
-    "href": "presentations/2023-04-19-cpg/index.html#keeping-a-tidy-folder",
-    "title": "Emrah Kırdök",
-    "section": "Keeping a tidy folder",
-    "text": "Keeping a tidy folder\nA folder structure:\nProject name\n├── README.md          <- The general documentation\n├── data\n│   |── raw            <- Raw data is read only\n│   └── processed      <- Processed data, can be reproducible\n│\n├── docs               <- Specific documentations\n│   ├── reports\n│   └── presentations\n│\n├── scripts            <- Script, ideally version tracked \n│ \n└── results            <- Results go here\n\n\nA tidy folder keep your research trackable and reproducible."
+    "objectID": "presentations/2023-04-19-cpg/index.html#helps-you-to-keep-a-tidy-folder",
+    "href": "presentations/2023-04-19-cpg/index.html#helps-you-to-keep-a-tidy-folder",
+    "title": "My Experience on Metagenomics and Workflows",
+    "section": "Helps you to keep a tidy folder",
+    "text": "Helps you to keep a tidy folder\nProject name\n├── LICENSE\n├── README.md          <- The top-level README for developers using this project.\n├── data\n│   ├── external       <- Data from third party sources.\n│   ├── interim        <- Intermediate data that has been transformed.\n│   ├── processed      <- The final, canonical data sets for modeling.\n│   └── raw            <- The original read only\n│\n├── docs               <- All the document information should go here\n│   ├── reports\n│   └── presentations\n│\n├── workflow           <- Source code and snakemake rules \n│   ├── Snakefile      <- A snakefile, should include all sub rules\n│   │\n│   ├── rules          <- Seperate snakefile rules\n│   │\n│   ├── environments   <- Conda environments\n│   │\n│   └── singularity    <- Singularity containers\n│ \n└── results\n\n\nA tidy folder keep your research trackable and reproducible."
   },
   {
-    "objectID": "presentations/2023-04-19-cpg/index.html#document-stuff",
-    "href": "presentations/2023-04-19-cpg/index.html#document-stuff",
-    "title": "Emrah Kırdök",
-    "section": "Document stuff",
-    "text": "Document stuff\n\nI generally place a README.md file\nI generally write on markdown\nDocumenting is crucial in bioinformatics\n\n\nIf you keep documenting your steps, it will be easy to reproducec results after a long time. Also"
+    "objectID": "presentations/2023-04-19-cpg/index.html#documenting",
+    "href": "presentations/2023-04-19-cpg/index.html#documenting",
+    "title": "My Experience on Metagenomics and Workflows",
+    "section": "Documenting",
+    "text": "Documenting\n\nI generally place a README.md file\nI generally write on markdown\nDocumenting is crucial in bioinformatics\n\n\nIf you keep documenting your steps, it will be easy to reproducec results after a long time. Also"
   },
   {
     "objectID": "presentations/2023-04-19-cpg/index.html#use-github",
     "href": "presentations/2023-04-19-cpg/index.html#use-github",
-    "title": "Emrah Kırdök",
+    "title": "My Experience on Metagenomics and Workflows",
     "section": "Use Github",
-    "text": "Use Github\n\nVersion controlling\nShare an collaborate\nAlso help you to backup"
-  },
-  {
-    "objectID": "presentations/2023-04-19-cpg/index.html#workflows-ok-15",
-    "href": "presentations/2023-04-19-cpg/index.html#workflows-ok-15",
-    "title": "Emrah Kırdök",
-    "section": "Workflows (OK 15)",
-    "text": "Workflows (OK 15)\n\nBash scripts are quite easy to write\nBut, every time you run it starts from beginning\nEvery bash script could be specific to one job\nJob dependency (with slurm?)"
-  },
-  {
-    "objectID": "presentations/2023-04-19-cpg/index.html#my-first-workflow-ok-16",
-    "href": "presentations/2023-04-19-cpg/index.html#my-first-workflow-ok-16",
-    "title": "Emrah Kırdök",
-    "section": "My first workflow (OK 16)",
-    "text": "My first workflow (OK 16)\n\n\nMy first workflow.\n\nvery fast\ncompletely on bash\ncan preserve job dependencies\nbut it runs from the beginning"
-  },
-  {
-    "objectID": "presentations/2023-04-19-cpg/index.html#snakemake-ok-17",
-    "href": "presentations/2023-04-19-cpg/index.html#snakemake-ok-17",
-    "title": "Emrah Kırdök",
-    "section": "Snakemake (OK 17)",
-    "text": "Snakemake (OK 17)\n\nSnakemake changed my view\nA fully robust system that sends"
+    "text": "Use Github\n\nVersion controlling\nShare an collaborate\nAlso help you to backup\n\n\n\naMeta Workshop"
   }
 ]
