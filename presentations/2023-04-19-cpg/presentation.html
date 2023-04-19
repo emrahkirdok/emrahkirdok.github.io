@@ -1,0 +1,623 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.2.475">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+<meta name="author" content="Emrah Kırdök, Ph.D.">
+<meta name="dcterms.date" content="2024-07-04">
+
+<title>Emrah Kırdök - My Experience on Metagenomics and Workflows</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1.6em;
+  vertical-align: middle;
+}
+</style>
+
+
+<script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../../">
+<script src="../../site_libs/quarto-html/quarto.js"></script>
+<script src="../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "overlay",
+  "limit": 20,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit"
+  }
+}</script>
+
+
+<link rel="stylesheet" href="../../styles.css">
+</head>
+
+<body class="nav-fixed">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand-lg navbar-dark ">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container">
+    <a class="navbar-brand" href="../../index.html">
+    <span class="navbar-title">Emrah Kırdök</span>
+    </a>
+  </div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll ms-auto">
+  <li class="nav-item">
+    <a class="nav-link" href="../../about.html">
+ <span class="menu-text">About</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../../lectures.html">
+ <span class="menu-text">Lectures</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../../talks.html">
+ <span class="menu-text">Talks</span></a>
+  </li>  
+  <li class="nav-item compact">
+    <a class="nav-link" href="https://github.com/emrahkirdok"><i class="bi bi-github" role="img">
+</i> 
+ <span class="menu-text"></span></a>
+  </li>  
+  <li class="nav-item compact">
+    <a class="nav-link" href="https://twitter.com/emrahkirdok"><i class="bi bi-twitter" role="img">
+</i> 
+ <span class="menu-text"></span></a>
+  </li>  
+</ul>
+              <div class="quarto-toggle-container">
+                  <a href="" class="quarto-reader-toggle nav-link" onclick="window.quartoToggleReader(); return false;" title="Toggle reader mode">
+  <div class="quarto-reader-toggle-btn">
+  <i class="bi"></i>
+  </div>
+</a>
+              </div>
+              <div id="quarto-search" class="" title="Search"></div>
+          </div> <!-- /navcollapse -->
+      </div> <!-- /container-fluid -->
+    </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<!-- sidebar -->
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul class="collapse">
+  <li><a href="#who-am-i" id="toc-who-am-i" class="nav-link active" data-scroll-target="#who-am-i">Who am I?</a></li>
+  <li><a href="#what-am-i-going-to-talk" id="toc-what-am-i-going-to-talk" class="nav-link" data-scroll-target="#what-am-i-going-to-talk">What am I going to talk?</a></li>
+  <li><a href="#bioinformatics-methdodology" id="toc-bioinformatics-methdodology" class="nav-link" data-scroll-target="#bioinformatics-methdodology">Bioinformatics methdodology</a></li>
+  <li><a href="#bioinformatics-methdodology-1" id="toc-bioinformatics-methdodology-1" class="nav-link" data-scroll-target="#bioinformatics-methdodology-1">Bioinformatics methdodology</a></li>
+  <li><a href="#bioinformatics-methdodology-2" id="toc-bioinformatics-methdodology-2" class="nav-link" data-scroll-target="#bioinformatics-methdodology-2">Bioinformatics methdodology</a></li>
+  <li><a href="#documenting-is-everything" id="toc-documenting-is-everything" class="nav-link" data-scroll-target="#documenting-is-everything">Documenting is everything</a></li>
+  <li><a href="#documenting-is-everything-1" id="toc-documenting-is-everything-1" class="nav-link" data-scroll-target="#documenting-is-everything-1">Documenting is everything</a></li>
+  <li><a href="#you-also-delete-stuff" id="toc-you-also-delete-stuff" class="nav-link" data-scroll-target="#you-also-delete-stuff">You also delete stuff!</a></li>
+  <li><a href="#lessons-learnt" id="toc-lessons-learnt" class="nav-link" data-scroll-target="#lessons-learnt">Lessons learnt</a></li>
+  <li><a href="#keeping-a-tidy-folder" id="toc-keeping-a-tidy-folder" class="nav-link" data-scroll-target="#keeping-a-tidy-folder">Keeping a tidy folder</a></li>
+  <li><a href="#document-stuff" id="toc-document-stuff" class="nav-link" data-scroll-target="#document-stuff">Document stuff</a></li>
+  </ul>
+</nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">My Experience on Metagenomics and Workflows</h1>
+<p class="subtitle lead">aMeta Workhsop</p>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    <div>
+    <div class="quarto-title-meta-heading">Author</div>
+    <div class="quarto-title-meta-contents">
+             <p>Emrah Kırdök, Ph.D. </p>
+          </div>
+  </div>
+    
+    <div>
+    <div class="quarto-title-meta-heading">Published</div>
+    <div class="quarto-title-meta-contents">
+      <p class="date">July 4, 2024</p>
+    </div>
+  </div>
+  
+    
+  </div>
+  
+
+</header>
+
+<section id="who-am-i" class="level2">
+<h2 class="anchored" data-anchor-id="who-am-i">Who am I?</h2>
+<ul>
+<li>Emrah Kırdök, Ph.D.</li>
+<li>I am trained as a biologist</li>
+<li>Working on ancient metagenomics</li>
+<li>Giving lectures on bioinformatics and data analysis</li>
+</ul>
+<div class="notes">
+<p>Hi I am Emrah Kırdök. I am working at Mersin University Department of Biotechnology as an Assistant Prof.&nbsp;</p>
+<p>Currently, I am working on ancient metagenomics and bioinformatics.</p>
+<p>Also I am teaching bioinformatics and data analysis at graduate and undergraduate level.</p>
+</div>
+</section>
+<section id="what-am-i-going-to-talk" class="level2">
+<h2 class="anchored" data-anchor-id="what-am-i-going-to-talk">What am I going to talk?</h2>
+<ul>
+<li>My experience on bioinformatics and metagenomics</li>
+<li>Simple tricks that I used</li>
+<li>How aMeta helped me to understand <code>snakemake</code></li>
+<li>My ideas on reproducible pipelines with <code>snakemake</code></li>
+<li>Hopefully, you will get an idea</li>
+</ul>
+<div class="notes">
+<p>I am trained as a biologist. After my Ph.D., I moved to bioinformaitcs and ancient metagenomics field.</p>
+<p>In this presentation, I will talk about by experiences in bioinformtics filed, in a life scientist perspective.</p>
+<p>Today, bioinformatics is mostly done by trial and error since there are vast amounts of tools and methods. So, you run something, you observe, you fix and run again.</p>
+<p>This doing and learning process could be sometimes very confusing, espacially if you are new to bioinformatics.</p>
+<p>But there are some tricks and tips that make your life easier in the long run. In this presentation I will explain you my experience on organizing bioinformatic projects, keeping a tidy folder.</p>
+</div>
+</section>
+<section id="bioinformatics-methdodology" class="level2">
+<h2 class="anchored" data-anchor-id="bioinformatics-methdodology">Bioinformatics methdodology</h2>
+<p>The very basic idea of the bioinformatics:</p>
+<div class="cell">
+<div class="cell-output-display">
+<div>
+<p>
+<svg width="672" height="480" viewbox="0.00 0.00 272.57 44.00" xmlns="http://www.w3.org/2000/svg" xlink="http://www.w3.org/1999/xlink">
+<g id="graph0" class="graph" transform="scale(1 1) rotate(0) translate(4 40)">
+<title>
+g
+</title>
+<polygon fill="white" stroke="transparent" points="-4,4 -4,-40 268.57,-40 268.57,4 -4,4"></polygon> <!-- input --> <g id="node1" class="node">
+<title>
+input
+</title>
+<ellipse fill="none" stroke="black" cx="31.42" cy="-18" rx="31.34" ry="18"></ellipse> <text text-anchor="middle" x="31.42" y="-13.8" font-family="Times,serif" font-size="14.00">Input</text> </g> <!-- tool --> <g id="node2" class="node">
+<title>
+tool
+</title>
+<polygon fill="none" stroke="black" points="152.84,-36 98.84,-36 98.84,0 152.84,0 152.84,-36"></polygon> <text text-anchor="middle" x="125.84" y="-13.8" font-family="Times,serif" font-size="14.00">Tool</text> </g> <!-- input&#45;&gt;tool --> <g id="edge1" class="edge">
+<title>
+input-&gt;tool
+</title>
+<path fill="none" stroke="black" d="M62.94,-18C71.16,-18 80.14,-18 88.64,-18"></path> <polygon fill="black" stroke="black" points="88.69,-21.5 98.69,-18 88.69,-14.5 88.69,-21.5"></polygon> </g> <!-- output --> <g id="node3" class="node">
+<title>
+output
+</title>
+<ellipse fill="none" stroke="black" cx="226.7" cy="-18" rx="37.72" ry="18"></ellipse> <text text-anchor="middle" x="226.7" y="-13.8" font-family="Times,serif" font-size="14.00">Output</text> </g> <!-- tool&#45;&gt;output --> <g id="edge2" class="edge">
+<title>
+tool-&gt;output
+</title>
+<path fill="none" stroke="black" d="M153.08,-18C160.89,-18 169.7,-18 178.42,-18"></path> <polygon fill="black" stroke="black" points="178.55,-21.5 188.55,-18 178.55,-14.5 178.55,-21.5"></polygon> </g> </g>
+</svg>
+</p>
+</div>
+</div>
+</div>
+<div class="notes">
+<p>I was basically a fish out of the sea when I first started working on bioinformatics.</p>
+<p>The very first thing I learned is that, every tool takes an input and produces an output. This idea was very straightforward when using bash.</p>
+<p>You’ll simply write your command line and check wait until the program terminates. Often you will get an error message, that you need to debug. After you fix all the errors, then you program will work as expected, and you will have an output.</p>
+</div>
+</section>
+<section id="bioinformatics-methdodology-1" class="level2">
+<h2 class="anchored" data-anchor-id="bioinformatics-methdodology-1">Bioinformatics methdodology</h2>
+<p>Generally it is more complicated…</p>
+<div class="cell">
+<div class="cell-output-display">
+<div>
+<p>
+<svg width="672" height="480" viewbox="0.00 0.00 394.45 125.00" xmlns="http://www.w3.org/2000/svg" xlink="http://www.w3.org/1999/xlink">
+<g id="graph0" class="graph" transform="scale(1 1) rotate(0) translate(4 121)">
+<title>
+g
+</title>
+<polygon fill="white" stroke="transparent" points="-4,4 -4,-121 390.45,-121 390.45,4 -4,4"></polygon> <!-- input1 --> <g id="node1" class="node">
+<title>
+input1
+</title>
+<ellipse fill="none" stroke="black" cx="36.25" cy="-72" rx="36.5" ry="18"></ellipse> <text text-anchor="middle" x="36.25" y="-67.8" font-family="Times,serif" font-size="14.00">Input1</text> </g> <!-- tool --> <g id="node4" class="node">
+<title>
+tool
+</title>
+<polygon fill="none" stroke="black" points="213.78,-63 159.78,-63 159.78,-27 213.78,-27 213.78,-63"></polygon> <text text-anchor="middle" x="186.78" y="-40.8" font-family="Times,serif" font-size="14.00">Tool</text> </g> <!-- input1&#45;&gt;tool --> <g id="edge1" class="edge">
+<title>
+input1-&gt;tool
+</title>
+<path fill="none" stroke="black" d="M70.58,-65.94C93.98,-61.69 125.26,-56 149.32,-51.63"></path> <polygon fill="black" stroke="black" points="150.26,-55.01 159.47,-49.78 149.01,-48.13 150.26,-55.01"></polygon> </g> <!-- input2 --> <g id="node2" class="node">
+<title>
+input2
+</title>
+<ellipse fill="none" stroke="black" cx="36.25" cy="-18" rx="36.5" ry="18"></ellipse> <text text-anchor="middle" x="36.25" y="-13.8" font-family="Times,serif" font-size="14.00">Input2</text> </g> <!-- input2&#45;&gt;tool --> <g id="edge2" class="edge">
+<title>
+input2-&gt;tool
+</title>
+<path fill="none" stroke="black" d="M70.58,-24.06C93.98,-28.31 125.26,-34 149.32,-38.37"></path> <polygon fill="black" stroke="black" points="149.01,-41.87 159.47,-40.22 150.26,-34.99 149.01,-41.87"></polygon> </g> <!-- parameters --> <g id="node3" class="node">
+<title>
+parameters
+</title>
+<polygon fill="none" stroke="black" points="264.86,-117 140.66,-117 108.71,-81 232.91,-81 264.86,-117"></polygon> <text text-anchor="middle" x="186.78" y="-94.8" font-family="Times,serif" font-size="14.00">parameters</text> </g> <!-- parameters&#45;&gt;tool --> <g id="edge5" class="edge">
+<title>
+parameters-&gt;tool
+</title>
+<path fill="none" stroke="black" d="M186.78,-80.79C186.78,-78.31 186.78,-75.83 186.78,-73.34"></path> <polygon fill="black" stroke="black" points="190.28,-73.14 186.78,-63.14 183.28,-73.14 190.28,-73.14"></polygon> </g> <!-- output1 --> <g id="node5" class="node">
+<title>
+output1
+</title>
+<ellipse fill="none" stroke="black" cx="343.76" cy="-72" rx="42.88" ry="18"></ellipse> <text text-anchor="middle" x="343.76" y="-67.8" font-family="Times,serif" font-size="14.00">Output1</text> </g> <!-- tool&#45;&gt;output1 --> <g id="edge3" class="edge">
+<title>
+tool-&gt;output1
+</title>
+<path fill="none" stroke="black" d="M214.07,-49.58C235.97,-53.4 267.75,-58.93 294.25,-63.55"></path> <polygon fill="black" stroke="black" points="293.66,-67 304.11,-65.27 294.86,-60.1 293.66,-67"></polygon> </g> <!-- output2 --> <g id="node6" class="node">
+<title>
+output2
+</title>
+<ellipse fill="none" stroke="black" cx="343.76" cy="-18" rx="42.88" ry="18"></ellipse> <text text-anchor="middle" x="343.76" y="-13.8" font-family="Times,serif" font-size="14.00">Output2</text> </g> <!-- tool&#45;&gt;output2 --> <g id="edge4" class="edge">
+<title>
+tool-&gt;output2
+</title>
+<path fill="none" stroke="black" d="M214.07,-40.42C235.97,-36.6 267.75,-31.07 294.25,-26.45"></path> <polygon fill="black" stroke="black" points="294.86,-29.9 304.11,-24.73 293.66,-23 294.86,-29.9"></polygon> </g> </g>
+</svg>
+</p>
+</div>
+</div>
+</div>
+<div class="notes">
+<p>However, generally it is more complicated. You will have more than one input and more then one ouputs. Often, you will have some parameters to fine tune.</p>
+</div>
+</section>
+<section id="bioinformatics-methdodology-2" class="level2">
+<h2 class="anchored" data-anchor-id="bioinformatics-methdodology-2">Bioinformatics methdodology</h2>
+<p>Actually it is much more complicated…</p>
+<div class="cell">
+<div class="cell-output-display">
+<div>
+<p>
+<svg width="672" height="480" viewbox="0.00 0.00 766.59 125.00" xmlns="http://www.w3.org/2000/svg" xlink="http://www.w3.org/1999/xlink">
+<g id="graph0" class="graph" transform="scale(1 1) rotate(0) translate(4 121)">
+<title>
+g
+</title>
+<polygon fill="white" stroke="transparent" points="-4,4 -4,-121 762.59,-121 762.59,4 -4,4"></polygon> <!-- input1 --> <g id="node1" class="node">
+<title>
+input1
+</title>
+<ellipse fill="none" stroke="black" cx="36.25" cy="-72" rx="36.5" ry="18"></ellipse> <text text-anchor="middle" x="36.25" y="-67.8" font-family="Times,serif" font-size="14.00">Input1</text> </g> <!-- tool1 --> <g id="node4" class="node">
+<title>
+tool1
+</title>
+<polygon fill="none" stroke="black" points="213.78,-63 159.78,-63 159.78,-27 213.78,-27 213.78,-63"></polygon> <text text-anchor="middle" x="186.78" y="-40.8" font-family="Times,serif" font-size="14.00">Tool1</text> </g> <!-- input1&#45;&gt;tool1 --> <g id="edge1" class="edge">
+<title>
+input1-&gt;tool1
+</title>
+<path fill="none" stroke="black" d="M70.58,-65.94C93.98,-61.69 125.26,-56 149.32,-51.63"></path> <polygon fill="black" stroke="black" points="150.26,-55.01 159.47,-49.78 149.01,-48.13 150.26,-55.01"></polygon> </g> <!-- input2 --> <g id="node2" class="node">
+<title>
+input2
+</title>
+<ellipse fill="none" stroke="black" cx="36.25" cy="-18" rx="36.5" ry="18"></ellipse> <text text-anchor="middle" x="36.25" y="-13.8" font-family="Times,serif" font-size="14.00">Input2</text> </g> <!-- input2&#45;&gt;tool1 --> <g id="edge2" class="edge">
+<title>
+input2-&gt;tool1
+</title>
+<path fill="none" stroke="black" d="M70.58,-24.06C93.98,-28.31 125.26,-34 149.32,-38.37"></path> <polygon fill="black" stroke="black" points="149.01,-41.87 159.47,-40.22 150.26,-34.99 149.01,-41.87"></polygon> </g> <!-- parameters --> <g id="node3" class="node">
+<title>
+parameters
+</title>
+<polygon fill="none" stroke="black" points="264.86,-117 140.66,-117 108.71,-81 232.91,-81 264.86,-117"></polygon> <text text-anchor="middle" x="186.78" y="-94.8" font-family="Times,serif" font-size="14.00">parameters</text> </g> <!-- parameters&#45;&gt;tool1 --> <g id="edge5" class="edge">
+<title>
+parameters-&gt;tool1
+</title>
+<path fill="none" stroke="black" d="M186.78,-80.79C186.78,-78.31 186.78,-75.83 186.78,-73.34"></path> <polygon fill="black" stroke="black" points="190.28,-73.14 186.78,-63.14 183.28,-73.14 190.28,-73.14"></polygon> </g> <!-- output1 --> <g id="node5" class="node">
+<title>
+output1
+</title>
+<ellipse fill="none" stroke="black" cx="343.76" cy="-72" rx="42.88" ry="18"></ellipse> <text text-anchor="middle" x="343.76" y="-67.8" font-family="Times,serif" font-size="14.00">Output1</text> </g> <!-- tool1&#45;&gt;output1 --> <g id="edge3" class="edge">
+<title>
+tool1-&gt;output1
+</title>
+<path fill="none" stroke="black" d="M214.07,-49.58C235.97,-53.4 267.75,-58.93 294.25,-63.55"></path> <polygon fill="black" stroke="black" points="293.66,-67 304.11,-65.27 294.86,-60.1 293.66,-67"></polygon> </g> <!-- output2 --> <g id="node6" class="node">
+<title>
+output2
+</title>
+<ellipse fill="none" stroke="black" cx="343.76" cy="-18" rx="42.88" ry="18"></ellipse> <text text-anchor="middle" x="343.76" y="-13.8" font-family="Times,serif" font-size="14.00">Output2</text> </g> <!-- tool1&#45;&gt;output2 --> <g id="edge4" class="edge">
+<title>
+tool1-&gt;output2
+</title>
+<path fill="none" stroke="black" d="M214.07,-40.42C235.97,-36.6 267.75,-31.07 294.25,-26.45"></path> <polygon fill="black" stroke="black" points="294.86,-29.9 304.11,-24.73 293.66,-23 294.86,-29.9"></polygon> </g> <!-- tool2 --> <g id="node7" class="node">
+<title>
+tool2
+</title>
+<polygon fill="none" stroke="black" points="556.83,-36 502.83,-36 502.83,0 556.83,0 556.83,-36"></polygon> <text text-anchor="middle" x="529.83" y="-13.8" font-family="Times,serif" font-size="14.00">Tool2</text> </g> <!-- output2&#45;&gt;tool2 --> <g id="edge6" class="edge">
+<title>
+output2-&gt;tool2
+</title>
+<path fill="none" stroke="black" d="M386.53,-18C418.41,-18 461.9,-18 492.38,-18"></path> <polygon fill="black" stroke="black" points="492.58,-21.5 502.58,-18 492.58,-14.5 492.58,-21.5"></polygon> </g> <!-- output3 --> <g id="node8" class="node">
+<title>
+output3
+</title>
+<ellipse fill="none" stroke="black" cx="715.9" cy="-18" rx="42.88" ry="18"></ellipse> <text text-anchor="middle" x="715.9" y="-13.8" font-family="Times,serif" font-size="14.00">Output3</text> </g> <!-- tool2&#45;&gt;output3 --> <g id="edge7" class="edge">
+<title>
+tool2-&gt;output3
+</title>
+<path fill="none" stroke="black" d="M557.2,-18C584.59,-18 628.16,-18 662.57,-18"></path> <polygon fill="black" stroke="black" points="662.93,-21.5 672.93,-18 662.93,-14.5 662.93,-21.5"></polygon> </g> <!-- moreparameters --> <g id="node9" class="node">
+<title>
+moreparameters
+</title>
+<polygon fill="none" stroke="black" points="637.09,-90 466.46,-90 422.57,-54 593.19,-54 637.09,-90"></polygon> <text text-anchor="middle" x="529.83" y="-67.8" font-family="Times,serif" font-size="14.00">moreparameters</text> </g> <!-- moreparameters&#45;&gt;tool2 --> <g id="edge8" class="edge">
+<title>
+moreparameters-&gt;tool2
+</title>
+<path fill="none" stroke="black" d="M529.83,-53.79C529.83,-51.31 529.83,-48.83 529.83,-46.34"></path> <polygon fill="black" stroke="black" points="533.33,-46.14 529.83,-36.14 526.33,-46.14 533.33,-46.14"></polygon> </g> </g>
+</svg>
+</p>
+</div>
+</div>
+</div>
+<div class="notes">
+<p>The core idea of bioinformatics methodology is to combine several tools into one neat workflow.</p>
+<p>But it is much more complicated then that. To do a bionformatics research, you’ll need to use a lot of different tools, a lot of files, different paramters.</p>
+<p>Often you’ll need to optimize parameters to get the correct result.</p>
+<p>This is the general idea of bioinformatics work style.</p>
+</div>
+</section>
+<section id="documenting-is-everything" class="level2">
+<h2 class="anchored" data-anchor-id="documenting-is-everything">Documenting is everything</h2>
+<p>Then you’ll create <code>bash</code> scripts to automate your codes.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src=".png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">A simple bash script</figcaption><p></p>
+</figure>
+</div>
+</section>
+<section id="documenting-is-everything-1" class="level2">
+<h2 class="anchored" data-anchor-id="documenting-is-everything-1">Documenting is everything</h2>
+<p>Soon you’ll have a folder full of results, bash scripts, and other stuff.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/folder.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">The folder that you have</figcaption><p></p>
+</figure>
+</div>
+<div class="notes">
+<p>Soon you will have a folder full of results. Then it becomes very tricky to find your way in these big folders. You need to document</p>
+</div>
+</section>
+<section id="you-also-delete-stuff" class="level2">
+<h2 class="anchored" data-anchor-id="you-also-delete-stuff">You also delete stuff!</h2>
+<ul>
+<li>Also, sometimes you can delete stuff</li>
+<li>Use <code>rm</code> very carefully!</li>
+<li>Make data read only!</li>
+</ul>
+</section>
+<section id="lessons-learnt" class="level2">
+<h2 class="anchored" data-anchor-id="lessons-learnt">Lessons learnt</h2>
+<ul>
+<li>Keep a tidy folder</li>
+<li>Always document your code</li>
+<li>Well organized</li>
+<li>make raw data read only!</li>
+<li>Workflowing
+<ul>
+<li>reproduce your results</li>
+</ul></li>
+</ul>
+<div class="notes">
+<p>So, at this stage I learnd the importance of keeping a tidy folder and keeping track of my codes. I always write my codes in bash scripts and also document the idea in the project.</p>
+<p>When yoy want to work on this project after 10 years, you need to remember the codes. So documentation is important.</p>
+<p>Also, make your data read only. If you keep your scripts and results intact, you can reproducce the results any time you want.</p>
+</div>
+</section>
+<section id="keeping-a-tidy-folder" class="level2">
+<h2 class="anchored" data-anchor-id="keeping-a-tidy-folder">Keeping a tidy folder</h2>
+<p>A folder explanation:</p>
+<pre><code>project
+    |----- data
+    |----- scripts
+    |----- results
+    |----- reports
+    |----- README.md</code></pre>
+<div class="notes">
+<p>A tidy folder keep your research fast.</p>
+</div>
+</section>
+<section id="document-stuff" class="level2">
+<h2 class="anchored" data-anchor-id="document-stuff">Document stuff</h2>
+<ul>
+<li>I generally place a <code>README.md</code> file</li>
+<li>I generally write on markdown</li>
+<li>documenting is everyhting!</li>
+</ul>
+<div class="notes">
+<p>If you keep documenting your steps, it will be easy to reproducec results after a long time. Also</p>
+</div>
+
+
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const clipboard = new window.ClipboardJS('.code-copy-button', {
+    target: function(trigger) {
+      return trigger.previousElementSibling;
+    }
+  });
+  clipboard.on('success', function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copied!");
+    let tooltip;
+    if (window.bootstrap) {
+      button.setAttribute("data-bs-toggle", "tooltip");
+      button.setAttribute("data-bs-placement", "left");
+      button.setAttribute("data-bs-title", "Copied!");
+      tooltip = new bootstrap.Tooltip(button, 
+        { trigger: "manual", 
+          customClass: "code-copy-button-tooltip",
+          offset: [0, -8]});
+      tooltip.show();    
+    }
+    setTimeout(function() {
+      if (tooltip) {
+        tooltip.hide();
+        button.removeAttribute("data-bs-title");
+        button.removeAttribute("data-bs-toggle");
+        button.removeAttribute("data-bs-placement");
+      }
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  });
+  function tippyHover(el, contentFn) {
+    const config = {
+      allowHTML: true,
+      content: contentFn,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start'
+    };
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      return note.innerHTML;
+    });
+  }
+  const findCites = (el) => {
+    const parentEl = el.parentElement;
+    if (parentEl) {
+      const cites = parentEl.dataset.cites;
+      if (cites) {
+        return {
+          el,
+          cites: cites.split(' ')
+        };
+      } else {
+        return findCites(el.parentElement)
+      }
+    } else {
+      return undefined;
+    }
+  };
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const citeInfo = findCites(ref);
+    if (citeInfo) {
+      tippyHover(citeInfo.el, function() {
+        var popup = window.document.createElement('div');
+        citeInfo.cites.forEach(function(cite) {
+          var citeDiv = window.document.createElement('div');
+          citeDiv.classList.add('hanging-indent');
+          citeDiv.classList.add('csl-entry');
+          var biblioDiv = window.document.getElementById('ref-' + cite);
+          if (biblioDiv) {
+            citeDiv.innerHTML = biblioDiv.innerHTML;
+          }
+          popup.appendChild(citeDiv);
+        });
+        return popup.innerHTML;
+      });
+    }
+  }
+});
+</script>
+</div> <!-- /content -->
+
+
+
+</body></html>

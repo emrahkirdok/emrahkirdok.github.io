@@ -1,17 +1,10 @@
 [
   {
-    "objectID": "index.html",
-    "href": "index.html",
-    "title": "Blog",
+    "objectID": "posts/2022-03-23-evrimsel-genombilim/index.html",
+    "href": "posts/2022-03-23-evrimsel-genombilim/index.html",
+    "title": "Evrimsel Genombilim Yaz Okulu 2022",
     "section": "",
-    "text": "In this page you could find my blog posts.\nNot too many content for now but I will write in Turkish and English.\nI will use Turkish when I try to explain some concepts to studends or general audience in Turkey.\nI will use English to write about academic concepts and in-depth data analysis posts.\n\nPosts\n\n\n\n\n\n\n\n\n\n  \n\n\n\n\nKahramanmaraş Depremi\n\n\n\n\n\n\n\ntürkçe\n\n\nveri-analizi\n\n\ndeprem\n\n\nR\n\n\nmersin\n\n\n\n\n\n\n\n\n\n\n\nFeb 15, 2023\n\n\nEmrah Kırdök, Ph.D.\n\n\n\n\n\n\n  \n\n\n\n\nEvrimsel Genombilim Yaz Okulu 2022\n\n\n\n\n\n\n\ntürkçe\n\n\nbioinformatics\n\n\nekoevo\n\n\nmersin\n\n\n\n\n\n\n\n\n\n\n\nMar 23, 2022\n\n\nEmrah Kırdök, Ph. D.\n\n\n\n\n\n\nNo matching items"
-  },
-  {
-    "objectID": "talks.html",
-    "href": "talks.html",
-    "title": "Talks",
-    "section": "",
-    "text": "At Aykut Kence Evolution Meeting 2022, I presented a talk named What does Ancient human microbes tell us? The talk is in Turkish.\n\nvideo"
+    "text": "Geleneksel hale gelmiş etkinlikler, akademik kültürün verimli bir şekilde aktarılması açısından oldukça önemli bir yer tutuyor. Bu sayede, belli bir alanda çalışan araştırmacılar ara sıra bir araya gelerek yeni yöntemleri, en güncel bilgileri, ve güncel çalışmalarını paylaşıyorlar. Ne güzel ki ülkemizde de artık geleneksel hale gelmiş bir çok etkinlik var ve bu etkinliklerden bir tanesi de Tuğçe Bilgin Sonay ve Sibel Küçükyıldırım Çelik tarafından organize edilen evrimsel genombilim uygulamalı eğitim serisi.\nTuğçe ve Sibel her yıl Türkiye’nin farklı şehirlerinde bu etkinlikleri organize ediyor ve lisansüstü seviyede araştırma yapan genç bilim insanlarını, biyoinformatik disiplininin evrimsel biyoloji alanında en güncel uygulamaları hakkında bilgilendirmeye çalışyor.\nDaha önce 2020 yılı başında, Ege Üniversitesinde Evren Koban Baştanlar ev sahipliğinde yapılan etkinliğe katılma fırsatı bulmuş ve metagenomik alanındaki bilgilerimi aktarmıştım.\nDaha sonra bu etkinliği Mersin Üniversitesinde düzenleme fikri ortaya çıktı ancak pandemi buna engel oldu ve geçen yıl çevrimiçi bir etkinlik düzenlemek durumunda kaldık…\nSonunda bu hayali gerçekleştiriyoruz! :)\nHepinizi 20 - 24 Haziran 2022’de Mersin Üniversitesi, Biyoteknoloji bölümünde düzenlenecek olan Evrimsel Genombilim yaz okulu etkinliğimize bekliyoruz. Etkinliğimizin internet sitesini ziyaret ederseniz daha ayrıntılı bilgiler alabilirsiniz:\nhttps://egenombilim.wixsite.com/home\n\n\n\nEvrimsel Genombilim uygulamalı eğitimi poster"
   },
   {
     "objectID": "posts/2023-02-12-quake/index.html",
@@ -21,11 +14,18 @@
     "text": "Geçtiğimiz haftanın nasıl geçtiğini anlayamadım. Son bir aydır, Avrupa Birliği tarafından desteklenen NEOMATRIX projesi kapsamında bir çalıştay hazırlığı içerisindeydik. Bu kapsamda, Stokholm, Paris ve Ankara’dan hocalar gelecek ve üzerinde çalıştığımız bir antik metagenomik analiz protokolü hakkında bir çalıştay gerçekleştirecektik.\nPazar akşamı ekip gelmiş, hazırlıklar olabildiğinde tamamlanmış ve artık çalıştay aşamasına geçmeye yaklaşmıştık. Ancak, Pazartesi sabaha karşı depremle uyandık…\nOlayın bu kısmına çok fazla giremeyeceğim ancak sonuç olarak çalıştay ve bütün toplantılar iptal oldu. Yurtdışından gelen hocaları ise Ankara üzerinden ülkelerine ulaşmalarını sağladık. Hepimize geçmiş olsun.\nBen de bir yandan telefon trafiği içerisindeyken, aklımın bir köşesinde “Acaba ülkemizde gerçekleşen depremleri inceleyebilir miyiz?” sorusu dönüyordu.\nTabii ki bir deprem bilimci ya da jeolog değilim. Bu konuda asla ahkam kesemem, ancak hali hazırda açık bir şekilde paylaşılan veriyi kullanarak bazı denemeler yapabiliriz. Bu yazıda amacım sadece ülkemizin bir deprem kuşağında olduğunu göstermek, ve depremlerin, fay hatları üzerinde nasıl hareket ettiğini görselleştirmek.\n\n\n\n\nGenel görünüm\nÖncelikle 1990 yılından bu yana yaşanmış depremlerin verisini AFAD internet sitesinden indirdim. Görünüşe göre veri Türkiye’de bulunan istasyonlar tarafından hissedilmiş bütün deprem kayıtlarını içeriyor. Dolayısıyla veriyi bir miktar işlemeniz gerekebilir. Ancak öncelikle verinin şeklini inceleyelim.\nVerimiz 402212 gözlem ve 10 değişkenden oluşuyor. Yani her satır bir deprem hareketini gösterirken, her sütün ise bu depremde gözlenen değişkenleri ifade ediyor.\nSütun isimlerine bakarsak:\n\n\n [1] \"Date\"      \"Longitude\" \"Latitude\"  \"Depth\"     \"Rms\"       \"Type\"     \n [7] \"Magnitude\" \"Location\"  \"EventID\"   \"index\"    \n\n\n\nDate: Olayın tarihi\nLongitude: Boylam\nLatitude: Enlem\nDepth: Derinlik\nRms: Algılanma süresi (saniye)\nType: Ölçüm tipi\nMagnitude: Şiddet\nLocation: Deprem bölgesi\nEventID: Depremin kodu\n\nBu bilgilere göre, ülkemiz istasyonları tarafından algılanan 402212 tane deprem olmuş. Bu depremlerin şiddetlerini bir histogram olarak incelersek daha açıklayıcı olacaktır (Figür 1).\n\n\n\n\n\nFigür 1: Veri setinde bulunan deprem şiddetlerinin histogram görüntüsü\n\n\n\n\nGördüğünüz gibi bu depremlerin büyük bir kısmı aslında düşük şiddete sahip. Sadece 37 tanesi 6’nın üzerinde gerçekleşmiş. Tabii bu veriye, ülkemize yakın noktalarda gerçekleşmiş depremler de dahi: Doğanın politik sınırları yok.\nAncak bu veri büyük oranda gürültü içeriyor. Örnek vermek gerekirse 4’den düşük şiddete sahip depremler bizim için anlamlı olmayabilir. Bu yüzden öncelikle 4’den düşük depremleri filtreleyelim.\n\n\n\n\n\n\nPeki bu depremler nerelerde odaklanmış? Enlem ve boylam bilgisinin histogramını oluşturursak bunu rahatlıkla gösterebiliriz. Figür 2’da gösterilen histogramlardaki tepe noktaları, aslında hangi enlem ve boylamlarda en fazla depremin oluştuğunu göstermektedir. Neredeyse bütün enlemlerde deprem gözlenirken, aslında asıl farklılık boylamlarda. Depremler Ege, ve Doğu Anadolu kısımlarında yoğunlaşmış.\nTabii ki burada 1990 öncesi depremler yok. Onlar da olsaydı daha farklı bir şeklimiz olurdu.\n\n\n\n\n\n\n\n(a) Enlem\n\n\n\n\n\n\n\n(b) Boylam\n\n\n\n\nFigür 2: Depremlerin enlem ve boylamlara göre dağılımı\n\n\nPeki depremlerin oluştuğu derinlik ve depremin şiddeti arasında bir bağlantı var mı? Bunu da bir nokta grafiği kullanarak gösterebiliriz (Figür 3). Bu şekle baktığımızda aslında depremlerin çoğunlukla yüzeye yakın bölgelerde oluştuğunu görebiliriz. Ayrıca, yüzeye yakın olan depremlerin de şiddetli olma ihtimali bir hayli fazla.\n\n\n\n\n\nFigür 3: Depremin oluştuğu derinlik ve şiddet arasındaki ilişki\n\n\n\n\nBu noktadan sonra veriyi sadeleştirmek için, 4’den küçük olan depremleri filtreledim. Filtrelenmiş veriyi artık Türkiye haritasına oturtabiliriz (Figür 4). Bu şekle baktığımızda aslında görmemiz gereken şey noktaların nerelerde yoğunlaştığı. Noktaların daha yoğun olduğu bölgeler, bize depremlerin de yoğun olarak oluştuğu yerleri göstermektedir.\nDikkat edersek, Kuzey Anadolu ve Doğu Anadolu fay hatları üzerinde yoğun bir deprem hareketliliği görülebilir.\n\n\n\n\n\nFigür 4: Ülkemizden algılanan 4 şiddetinden büyük depremlerin gösterimi\n\n\n\n\nŞimd haritayı biraz daha Türkiye üzerine odaklayalım ve depremlerin büyüklüklerini de görselleştirmeye ekleyelim. Bu sayede büyük depremlerin nerelerde olduğunu görebiliriz (Figür 5). Bu şekilde, kırmızı noktaların yoğunluğu arttıkça, o bölgede güçlü bir deprem olduğu anlaşılmaktadır.\n\n\n\n\n\nFigür 5: Ülkemizde yaşanan 4 şiddetindeki büyük depremlerin\n\n\n\n\nBu şekil bence Türkiye’nin gerçekten bir deprem bölgesi olduğu gerçeğini çok güzel bir şekide anlatıyor. Depremler Batı ve Doğu bölgelerimizde yoğunlaşmış durumda. Orta Anadolu’dan başlayarak, Akdeniz’in ortasına kadar inen bölgede ise fazla deprem görünmüyor.\n\n\nKahramanmaraş depremi ve Doğu Anadolu fay hattı\nAncak benim ilgilendiğim nokta şu an için Kahramanmaraş depremi. Şimdi biraz daha bu bölgeye odaklalanalım. Acaba fay hattı hangi yönlere doğru kırılmış olabilir? Küçük bir animasyonla bunu görselleştirebilriz (Figür 6). Harika! Önce ilk depremle kuzey-güney ekseninde kırılan fay hattı, daha sonra ikinci depremle doğu-batı ekseninde kırılmaya başlıyor.\n\n\n\n\n\nFigür 6: Kahramanmaraş bölgesinde yaşanan depremin animasyonu\n\n\n\n\n\n\nDoğu Anadolu fayının kırılması\nFay hatlarının doğudan batıya doğru kırıldığını haberlerden duymuşsunuzdur mutlaka. Küçük bir aramayla, Doğu Anadolu fayı üzerinde bulunan deprem serilerine ulaştım:\n\nAdana Ceyhan depremi (1998)\nBingöl depremi (2003)\nElazığ depremleri (2003, 2010)\nGaziantep Kahramanmaraş depremi (2023)\n\nAcaba bu bilgiyi, elimizdeki veriyi kullanarak görselleştirebilir miyiz? Bunun için elimizdeki veriyi 1998 Adana Ceyhan depreminden sonraki depremleri içerecek şekilde filtreliyorum. Ayrıca depremleri sadece Doğu Anadolu fay hattını içerecek şekilde filtreliyorum ki deprem serisini daha rahat anlayalım (Figür 7).\n\n\n\n\n\nFigür 7: Doğu Anadolu fay hattının kırılması\n\n\n\n\nŞekle baktığımızda gerçekten Doğu Anadolu fayı ekseninde bir hareketlilik göze çarpıyor. 1998 yılındaki Adana depreminin ardından oluşan büyük depremler, doğu-batı ekseninde gerçekleşiyor.\n\n\nSonuç\nBu yazıyı yazma amacım aslında derin bir deprem incelemesi yapmak değildi - ki zaten uzmanlık alanım değil. Kamuya açık verileri kullanarak neler yapabiliriz onu görmek istedim. Buradaki görselleştirmelere daha da geliştirilebilir. O da sonraki yazıların konusu olsun.\n\n\nTeşekkür\nAnimasyonlar için gerekli kodu oluşturan Arda Sevkar’a teşekkürler."
   },
   {
-    "objectID": "posts/2022-03-23-evrimsel-genombilim/index.html",
-    "href": "posts/2022-03-23-evrimsel-genombilim/index.html",
-    "title": "Evrimsel Genombilim Yaz Okulu 2022",
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Blog",
     "section": "",
-    "text": "Geleneksel hale gelmiş etkinlikler, akademik kültürün verimli bir şekilde aktarılması açısından oldukça önemli bir yer tutuyor. Bu sayede, belli bir alanda çalışan araştırmacılar ara sıra bir araya gelerek yeni yöntemleri, en güncel bilgileri, ve güncel çalışmalarını paylaşıyorlar. Ne güzel ki ülkemizde de artık geleneksel hale gelmiş bir çok etkinlik var ve bu etkinliklerden bir tanesi de Tuğçe Bilgin Sonay ve Sibel Küçükyıldırım Çelik tarafından organize edilen evrimsel genombilim uygulamalı eğitim serisi.\nTuğçe ve Sibel her yıl Türkiye’nin farklı şehirlerinde bu etkinlikleri organize ediyor ve lisansüstü seviyede araştırma yapan genç bilim insanlarını, biyoinformatik disiplininin evrimsel biyoloji alanında en güncel uygulamaları hakkında bilgilendirmeye çalışyor.\nDaha önce 2020 yılı başında, Ege Üniversitesinde Evren Koban Baştanlar ev sahipliğinde yapılan etkinliğe katılma fırsatı bulmuş ve metagenomik alanındaki bilgilerimi aktarmıştım.\nDaha sonra bu etkinliği Mersin Üniversitesinde düzenleme fikri ortaya çıktı ancak pandemi buna engel oldu ve geçen yıl çevrimiçi bir etkinlik düzenlemek durumunda kaldık…\nSonunda bu hayali gerçekleştiriyoruz! :)\nHepinizi 20 - 24 Haziran 2022’de Mersin Üniversitesi, Biyoteknoloji bölümünde düzenlenecek olan Evrimsel Genombilim yaz okulu etkinliğimize bekliyoruz. Etkinliğimizin internet sitesini ziyaret ederseniz daha ayrıntılı bilgiler alabilirsiniz:\nhttps://egenombilim.wixsite.com/home\n\n\n\nEvrimsel Genombilim uygulamalı eğitimi poster"
+    "text": "In this page you could find my blog posts.\nNot too many content for now but I will write in Turkish and English.\nI will use Turkish when I try to explain some concepts to studends or general audience in Turkey.\nI will use English to write about academic concepts and in-depth data analysis posts.\n\nPosts\n\n\n\n\n\n\n\n\n\n  \n\n\n\n\nKahramanmaraş Depremi\n\n\n\n\n\n\n\ntürkçe\n\n\nveri-analizi\n\n\ndeprem\n\n\nR\n\n\nmersin\n\n\n\n\n\n\n\n\n\n\n\nFeb 15, 2023\n\n\nEmrah Kırdök, Ph.D.\n\n\n\n\n\n\n  \n\n\n\n\nEvrimsel Genombilim Yaz Okulu 2022\n\n\n\n\n\n\n\ntürkçe\n\n\nbioinformatics\n\n\nekoevo\n\n\nmersin\n\n\n\n\n\n\n\n\n\n\n\nMar 23, 2022\n\n\nEmrah Kırdök, Ph. D.\n\n\n\n\n\n\nNo matching items"
+  },
+  {
+    "objectID": "lectures.html",
+    "href": "lectures.html",
+    "title": "Lectures",
+    "section": "",
+    "text": "At Mersin University Department of Biotechnology, I am giving ten courses that span to various themes. These lectures are in Turkish now and they are maintained as Github repositories. So feel free to fork and contribute!\n\nData Analysis in Life Sciences (TR) site\n\nUndergrad level Data Analysis course\nUndergrad level Statistical Learning course\nGrad level Data Analysis in Biotechnology course\n\nBioinformatics (TR) site\n\nUndergrad level Bioinformatics\nGrad level Advanced Bioinformatics"
   },
   {
     "objectID": "about.html",
@@ -35,10 +35,87 @@
     "text": "Hi!\nThis is Emrah. I am an Assistant Prof. at Mersin University Department of Biotechnology. In this website I will be blogging about academia, data science, and ancient DNA.\n\nWork Experience\n2019 - Current: Mersin University, Department of Biotechnology\n2018 - 2019: Stockholm University, Department of Archaelogy and Classical Studies\n2010 - 2016: Gebze Technical University, Department of Molecular Biology and Genetics"
   },
   {
-    "objectID": "lectures.html",
-    "href": "lectures.html",
-    "title": "Lectures",
+    "objectID": "talks.html",
+    "href": "talks.html",
+    "title": "Talks",
     "section": "",
-    "text": "At Mersin University Department of Biotechnology, I am giving ten courses that span to various themes. These lectures are in Turkish now and they are maintained as Github repositories. So feel free to fork and contribute!\n\nData Analysis in Life Sciences (TR) site\n\nUndergrad level Data Analysis course\nUndergrad level Statistical Learning course\nGrad level Data Analysis in Biotechnology course\n\nBioinformatics (TR) site\n\nUndergrad level Bioinformatics\nGrad level Advanced Bioinformatics"
+    "text": "At Aykut Kence Evolution Meeting 2022, I presented a talk named What does Ancient human microbes tell us? The talk is in Turkish.\n\nvideo"
+  },
+  {
+    "objectID": "presentations/2023-04-19-cpg/presentation.html",
+    "href": "presentations/2023-04-19-cpg/presentation.html",
+    "title": "My Experience on Metagenomics and Workflows",
+    "section": "",
+    "text": "Emrah Kırdök, Ph.D.\nI am trained as a biologist\nWorking on ancient metagenomics\nGiving lectures on bioinformatics and data analysis\n\n\nHi I am Emrah Kırdök. I am working at Mersin University Department of Biotechnology as an Assistant Prof. \nCurrently, I am working on ancient metagenomics and bioinformatics.\nAlso I am teaching bioinformatics and data analysis at graduate and undergraduate level."
+  },
+  {
+    "objectID": "presentations/2023-04-19-cpg/presentation.html#what-am-i-going-to-talk",
+    "href": "presentations/2023-04-19-cpg/presentation.html#what-am-i-going-to-talk",
+    "title": "My Experience on Metagenomics and Workflows",
+    "section": "What am I going to talk?",
+    "text": "What am I going to talk?\n\nMy experience on bioinformatics and metagenomics\nSimple tricks that I used\nHow aMeta helped me to understand snakemake\nMy ideas on reproducible pipelines with snakemake\nHopefully, you will get an idea\n\n\nI am trained as a biologist. After my Ph.D., I moved to bioinformaitcs and ancient metagenomics field.\nIn this presentation, I will talk about by experiences in bioinformtics filed, in a life scientist perspective.\nToday, bioinformatics is mostly done by trial and error since there are vast amounts of tools and methods. So, you run something, you observe, you fix and run again.\nThis doing and learning process could be sometimes very confusing, espacially if you are new to bioinformatics.\nBut there are some tricks and tips that make your life easier in the long run. In this presentation I will explain you my experience on organizing bioinformatic projects, keeping a tidy folder."
+  },
+  {
+    "objectID": "presentations/2023-04-19-cpg/presentation.html#bioinformatics-methdodology",
+    "href": "presentations/2023-04-19-cpg/presentation.html#bioinformatics-methdodology",
+    "title": "My Experience on Metagenomics and Workflows",
+    "section": "Bioinformatics methdodology",
+    "text": "Bioinformatics methdodology\nThe very basic idea of the bioinformatics:\n\n\n\n\n\n\n\ng\n\n  \n\ninput\n\n Input   \n\ntool\n\n Tool   \n\ninput->tool\n\n    \n\noutput\n\n Output   \n\ntool->output\n\n   \n\n\n\n\n\n\nI was basically a fish out of the sea when I first started working on bioinformatics.\nThe very first thing I learned is that, every tool takes an input and produces an output. This idea was very straightforward when using bash.\nYou’ll simply write your command line and check wait until the program terminates. Often you will get an error message, that you need to debug. After you fix all the errors, then you program will work as expected, and you will have an output."
+  },
+  {
+    "objectID": "presentations/2023-04-19-cpg/presentation.html#bioinformatics-methdodology-1",
+    "href": "presentations/2023-04-19-cpg/presentation.html#bioinformatics-methdodology-1",
+    "title": "My Experience on Metagenomics and Workflows",
+    "section": "Bioinformatics methdodology",
+    "text": "Bioinformatics methdodology\nGenerally it is more complicated…\n\n\n\n\n\n\n\ng\n\n  \n\ninput1\n\n Input1   \n\ntool\n\n Tool   \n\ninput1->tool\n\n    \n\ninput2\n\n Input2   \n\ninput2->tool\n\n    \n\nparameters\n\n parameters   \n\nparameters->tool\n\n    \n\noutput1\n\n Output1   \n\ntool->output1\n\n    \n\noutput2\n\n Output2   \n\ntool->output2\n\n   \n\n\n\n\n\n\nHowever, generally it is more complicated. You will have more than one input and more then one ouputs. Often, you will have some parameters to fine tune."
+  },
+  {
+    "objectID": "presentations/2023-04-19-cpg/presentation.html#bioinformatics-methdodology-2",
+    "href": "presentations/2023-04-19-cpg/presentation.html#bioinformatics-methdodology-2",
+    "title": "My Experience on Metagenomics and Workflows",
+    "section": "Bioinformatics methdodology",
+    "text": "Bioinformatics methdodology\nActually it is much more complicated…\n\n\n\n\n\n\n\ng\n\n  \n\ninput1\n\n Input1   \n\ntool1\n\n Tool1   \n\ninput1->tool1\n\n    \n\ninput2\n\n Input2   \n\ninput2->tool1\n\n    \n\nparameters\n\n parameters   \n\nparameters->tool1\n\n    \n\noutput1\n\n Output1   \n\ntool1->output1\n\n    \n\noutput2\n\n Output2   \n\ntool1->output2\n\n    \n\ntool2\n\n Tool2   \n\noutput2->tool2\n\n    \n\noutput3\n\n Output3   \n\ntool2->output3\n\n    \n\nmoreparameters\n\n moreparameters   \n\nmoreparameters->tool2\n\n   \n\n\n\n\n\n\nThe core idea of bioinformatics methodology is to combine several tools into one neat workflow.\nBut it is much more complicated then that. To do a bionformatics research, you’ll need to use a lot of different tools, a lot of files, different paramters.\nOften you’ll need to optimize parameters to get the correct result.\nThis is the general idea of bioinformatics work style."
+  },
+  {
+    "objectID": "presentations/2023-04-19-cpg/presentation.html#documenting-is-everything",
+    "href": "presentations/2023-04-19-cpg/presentation.html#documenting-is-everything",
+    "title": "My Experience on Metagenomics and Workflows",
+    "section": "Documenting is everything",
+    "text": "Documenting is everything\nThen you’ll create bash scripts to automate your codes.\n\n\n\nA simple bash script"
+  },
+  {
+    "objectID": "presentations/2023-04-19-cpg/presentation.html#documenting-is-everything-1",
+    "href": "presentations/2023-04-19-cpg/presentation.html#documenting-is-everything-1",
+    "title": "My Experience on Metagenomics and Workflows",
+    "section": "Documenting is everything",
+    "text": "Documenting is everything\nSoon you’ll have a folder full of results, bash scripts, and other stuff.\n\n\n\nThe folder that you have\n\n\n\nSoon you will have a folder full of results. Then it becomes very tricky to find your way in these big folders. You need to document"
+  },
+  {
+    "objectID": "presentations/2023-04-19-cpg/presentation.html#you-also-delete-stuff",
+    "href": "presentations/2023-04-19-cpg/presentation.html#you-also-delete-stuff",
+    "title": "My Experience on Metagenomics and Workflows",
+    "section": "You also delete stuff!",
+    "text": "You also delete stuff!\n\nAlso, sometimes you can delete stuff\nUse rm very carefully!\nMake data read only!"
+  },
+  {
+    "objectID": "presentations/2023-04-19-cpg/presentation.html#lessons-learnt",
+    "href": "presentations/2023-04-19-cpg/presentation.html#lessons-learnt",
+    "title": "My Experience on Metagenomics and Workflows",
+    "section": "Lessons learnt",
+    "text": "Lessons learnt\n\nKeep a tidy folder\nAlways document your code\nWell organized\nmake raw data read only!\nWorkflowing\n\nreproduce your results\n\n\n\nSo, at this stage I learnd the importance of keeping a tidy folder and keeping track of my codes. I always write my codes in bash scripts and also document the idea in the project.\nWhen yoy want to work on this project after 10 years, you need to remember the codes. So documentation is important.\nAlso, make your data read only. If you keep your scripts and results intact, you can reproducce the results any time you want."
+  },
+  {
+    "objectID": "presentations/2023-04-19-cpg/presentation.html#keeping-a-tidy-folder",
+    "href": "presentations/2023-04-19-cpg/presentation.html#keeping-a-tidy-folder",
+    "title": "My Experience on Metagenomics and Workflows",
+    "section": "Keeping a tidy folder",
+    "text": "Keeping a tidy folder\nA folder explanation:\nproject\n    |----- data\n    |----- scripts\n    |----- results\n    |----- reports\n    |----- README.md\n\nA tidy folder keep your research fast."
+  },
+  {
+    "objectID": "presentations/2023-04-19-cpg/presentation.html#document-stuff",
+    "href": "presentations/2023-04-19-cpg/presentation.html#document-stuff",
+    "title": "My Experience on Metagenomics and Workflows",
+    "section": "Document stuff",
+    "text": "Document stuff\n\nI generally place a README.md file\nI generally write on markdown\ndocumenting is everyhting!\n\n\nIf you keep documenting your steps, it will be easy to reproducec results after a long time. Also"
   }
 ]
