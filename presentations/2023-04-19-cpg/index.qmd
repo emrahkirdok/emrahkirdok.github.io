@@ -1,83 +1,54 @@
 ---
 title: "My Experience on Metagenomics and Workflows"
+institue: "Mersin University, Department of Biotechnology"
 subtitle: "aMeta Workhsop"
 author: "Emrah Kırdök, Ph.D."
 date: "19-04-2023"
-format: 
-    revealjs:
-        slide-number: true
-        footer: "aMeta Workshop"
-        embed-resources: true
+format: pptx
 
 ---
 
 ## Who am I?
 
 + Emrah Kırdök, Ph.D.
-+ I am trained as a biologist
++ Trained as a biologist
 + Working on ancient metagenomics
 + Giving lectures on bioinformatics and data analysis
 
 ::: {.notes}
 
-Hi I am Emrah Kırdök. I am working at Mersin University Department of Biotechnology as an Assistant Prof. 
+Hi I am Emrah Kırdök. I think most of you already know me. I am working at Mersin University, deparment of biotechnology. Currently, I am working on ancient metagenomics and bioinformatics. Also I am teaching bioinformatics and data analysis at graduate and undergraduate level.
 
-Currently, I am working on ancient metagenomics and bioinformatics. 
+Nora and Zoe asked me to present some of my experiences and struggles in ancient metagenomics studies and how aMeta helped me to deal these. 
 
-Also I am teaching bioinformatics and data analysis at graduate and undergraduate level.
+After some thought, I've come up with this presentation.
 
 :::
 
-## What am I going to talk?
+## Outline
 
-+ My experience on bioinformatics and metagenomics
-+ Simple tricks that I used
++ Ancient metagenomics is still a new discipline
++ We do not have very well defined methods
++ Some struggle is inevitable
++ Lessons learnt, some good practice and tricks
 + How aMeta helped me to understand `snakemake`
-+ My ideas on reproducible pipelines with `snakemake`
-+ Hopefully, you will get an idea
+
 
 ::: {.notes}
 
-I am trained as a biologist. After my Ph.D., I moved to bioinformaitcs and ancient metagenomics field. 
+Trained as a biologist, I moved to bioinformatics and ancient metagenomics field after my Ph.D. studies. However, this change was not really easy. 
 
-In this presentation, I will talk about by experiences in bioinformtics filed, in a life scientist perspective.
+Bioinformatics is mostly done by trial and error. So, you run something, you observe, you fix and run again. And even ancient metagenomics is particularly hard, since it is still a young filed. There are just a handful of methods out there, and in most occasions you'll have to get your hands dirty.
 
-Today, bioinformatics is mostly done by trial and error since there are vast amounts of tools and methods. So, you run something, you observe, you fix and run again. 
-
-This doing and learning process could be sometimes very confusing, espacially if you are new to bioinformatics. 
-
-But there are some tricks and tips that make your life easier in the long run. In this presentation I will explain you my experience on organizing bioinformatic projects, keeping a tidy folder.
+But there are some tricks and tips that make your life easier in the long run. In this presentation I will explain you my experience on ancient metagenomics from the start and show you some tricks.
 
 :::
 
-## Bioinformatics methdodology
-
-The very basic idea of the bioinformatics:
-```{dot}
-// fig-cap: "A simple representation of input and outputs"
-
-digraph g { 
-    rankdir = LR;
-    input [label = "Input"];
-    tool [label = "Tool", shape = "box"];
-    output [label = "Output"];
-    input -> tool -> output
-}
-```
-
-::: {.notes}
-
-I was basically a fish out of the sea when I first started working on bioinformatics.
-
-The very first thing I learned is that, every tool takes an input and produces an output. This idea was very straightforward when using bash.
-
-You'll simply write your command line and check wait until the program terminates. Often you will get an error message, that you need to debug. After you fix all the errors, then you program will work as expected, and you will have an output.
-
-:::
+# Struggles
 
 ## Bioinformatics methdodology
 
-Generally it is more complicated...
+A simple methodlogy
 
 ```{dot}
 // fig-cap: "A simple representation of input and outputs"
@@ -99,7 +70,7 @@ digraph g {
 
 ::: {.notes}
 
-However, generally it is more complicated. You will have more than one input and more then one ouputs. Often, you will have some parameters to fine tune.
+However, generally it is more complicated. You will have more than one input and more then one outputs. Often, you will have some parameters to fine tune.
 
 :::
 
@@ -148,38 +119,81 @@ This is the general idea of bioinformatics work style.
 
 :::
 
-## Documenting is everything
+## Ancient metagenomics methodology
 
-Then you'll create `bash` scripts to automate your codes.
+And in ancient metagenomics, it is much more complicated...
 
-![A simple bash script]()
+```{dot}
+// fig-cap: "A simple representation of input and outputs"
 
-## Documenting is everything
+digraph g { 
+    rankdir = LR;
+    fastq [label = "Fastq\nfile"];
+    output [label = "Classification\nOutput"]
+    classification [label = "Classification", shape = "box"]
+    authentication [label = "Extract aDNA reads\nand\nauthenticate", shape = "box"]
 
-Soon you'll have a folder full of results, bash scripts, and other stuff.
+    database [labels = "Database", shape = "parallelogram"];
+
+    fastq -> classification -> output;
+    database -> classification;
+    {rank = same; database; classification};
+    output -> authentication;
+    database -> authentication;
+    authentication -> {authentication_1, authentication_2, authentication_3, authentication_4, authentication_N}
+} 
+```
+
+::: {.notes}
+
+And in ancient metagenomics, this is much more harder. Generally, we classify DNA reads in fastq files using a reference sequence collection. THis collection contains DNA sequences that have known taxonomical ranks. By comparing each sequence to this collection, we try to identify the taxonomic origin of each DNA read.
+
+However, in ancient metaggneomics, we also need to extract DNA sequences and authenticate the ancient status. So, at the end we do not know how many bacteria we have.
+
+:::
+
+## Ancient metagenomics methodology
+
+It is even more complicated in a real situation:
+
+![The aMeta Workflow](https://kirdoklab.github.io/aMeta-workshop/images/rulegrap_January_2023.png)
+
+
+
+## What you will end up?
+
++ Soon, you will have a big folder filled with data
 
 ![The folder that you have](images/folder.png)
 
 ::: {.notes}
 
-Soon you will have a folder full of results. Then it becomes very tricky to find your way in these big folders. You need to document
+Soon you will have a folder full of results. Then it becomes very tricky to find your way in these big folders. This is one of the earliest folder that I work.
+
+Actualy I really don't know what is going in here :)
 
 :::
 
-## You also delete stuff!
+## Sometimes you delete things
 
 + Also, sometimes you can delete stuff
 + Use `rm` very carefully!
-+ Make data read only!
++ This unfortunately happens...
+
+::: {.notes}
+
+And most of the times, you also delete some stuff.
+
+:::
+
+# Lessons learnt
 
 ## Lessons learnt
 
-+ Keep a tidy folder
++ Keeping a tidy folder
 + Always document your code
-+ Well organized
-+ make raw data read only!
-+ Workflowing
-    + reproduce your results
++ Make raw data read only!
++ Using a workflowing tool (`snakemake`)
 
 ::: {.notes}
 
@@ -190,22 +204,37 @@ When yoy want to work on this project after 10 years, you need to remember the c
 Also, make your data read only. If you keep your scripts and results intact, you can reproducce the results any time you want.
 :::
 
+## Diagrams might be helpful
+
++ I try to teach bioinformatics using diagrams
++ Keeping a track of input and outputs is essential
+
+>[The exam from a student]()
+
 ## Keeping a tidy folder
 
-A folder explanation:
+A folder structure:
 
 ```
-project
-    |----- data
-    |----- scripts
-    |----- results
-    |----- reports
-    |----- README.md
+Project name
+├── README.md          <- The general documentation
+├── data
+│   |── raw            <- Raw data is read only
+│   └── processed      <- Processed data, can be reproducible
+│
+├── docs               <- Specific documentations
+│   ├── reports
+│   └── presentations
+│
+├── scripts            <- Script, ideally version tracked 
+│ 
+└── results            <- Results go here
+
 ```
 
 ::: {.notes}
 
-A tidy folder keep your research fast.
+A tidy folder keep your research trackable and reproducible.
 
 :::
 
@@ -213,10 +242,43 @@ A tidy folder keep your research fast.
 
 + I generally place a `README.md` file
 + I generally write on markdown
-+ documenting is everyhting!
++ Documenting is crucial in bioinformatics
 
 ::: {.notes}
 
 If you keep documenting your steps, it will be easy to reproducec results after a long time. Also
 
 :::
+
+## Use Github
+
++ Version controlling 
++ Share an collaborate
++ Also help you to backup
+
+# Workflow
+
+## Workflows (OK 15)
+
++ Bash scripts are quite easy to write
++ But, every time you run it starts from beginning
++ Every bash script could be specific to one job
++ Job dependency (with slurm?)
+
+## My first workflow (OK 16)
+
+![](images/wrapper.png)
+
+::: {.notes}
+My first workflow. 
+
+  - very fast
+  - completely on bash
+  - can preserve job dependencies
+  - but it runs from the beginning
+:::
+
+## Snakemake (OK 17)
+
++ Snakemake changed my view
++ A fully robust system that sends
