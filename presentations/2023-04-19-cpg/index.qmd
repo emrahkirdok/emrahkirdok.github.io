@@ -36,7 +36,6 @@ After some thought, I've come up with this presentation.
 + Lessons learnt, some good practice and tricks
 + How aMeta helped me to understand `snakemake`
 
-
 ::: {.notes}
 
 Trained as a biologist, I moved to bioinformatics and ancient metagenomics field after my Ph.D. studies. However, this change was not really easy. 
@@ -51,7 +50,7 @@ But there are some tricks and tips that make your life easier in the long run. I
 
 ## Bioinformatics methdodology
 
-A simple methodlogy
+A simple methodology
 
 ```{dot}
 // fig-cap: "A simple representation of input and outputs"
@@ -143,7 +142,8 @@ digraph g {
     {rank = same; database; classification};
     output -> authentication;
     database -> authentication;
-    authentication -> {authentication_1, authentication_2, authentication_3, authentication_4, authentication_N}
+    authentication -> {authentication_1, authentication_2, authentication_3, authentication_4, authentication_N};
+    {authentication_1, authentication_2, authentication_3, authentication_4, authentication_N} -> "Final Report"
 } 
 ```
 
@@ -161,77 +161,66 @@ It is even more complicated in a real situation:
 
 ![The aMeta Workflow](https://kirdoklab.github.io/aMeta-workshop/images/rulegrap_January_2023.png)
 
+## Authentication part of the pipeline
 
+![It would be very hard to authenticate one by one](images/authentication.png)
 
-## What you will end up?
+# Workflow
 
-+ Soon, you will have a big folder filled with data
+## Workflows
 
-![The folder that you have](images/folder.png)
++ Bash scripts are quite easy to write
++ But, every time you run it starts from beginning
++ Every bash script could be specific to one job
++ Job dependency (with slurm?)
 
-::: {.notes}
+## My first workflow
 
-Soon you will have a folder full of results. Then it becomes very tricky to find your way in these big folders. This is one of the earliest folder that I work.
-
-Actualy I really don't know what is going in here :)
-
-:::
-
-## Sometimes you delete things
-
-+ Also, sometimes you can delete stuff
-+ Use `rm` very carefully!
-+ This unfortunately happens...
+![](images/wrapper.png)
 
 ::: {.notes}
+My first workflow. 
 
-And most of the times, you also delete some stuff.
-
+  - very fast
+  - completely on bash
+  - can preserve job dependencies
+  - but it runs from the beginning
 :::
 
-# Lessons learnt
+## Snakemake
 
-## Lessons learnt
++ aMeta allowed me to learn `snakemake`
++ Snakemake changed my view
++ A fully robust system that can automatically send slurm jobs
 
-+ Keeping a tidy folder
-+ Always document your code
-+ Make raw data read only!
-+ Using a workflowing tool (`snakemake`)
 
-::: {.notes}
 
-So, at this stage I learnd the importance of keeping a tidy folder and keeping track of my codes. I always write my codes in bash scripts and also document the idea in the project.
-
-When yoy want to work on this project after 10 years, you need to remember the codes. So documentation is important.
-
-Also, make your data read only. If you keep your scripts and results intact, you can reproducce the results any time you want.
-:::
-
-## Diagrams might be helpful
-
-+ I try to teach bioinformatics using diagrams
-+ Keeping a track of input and outputs is essential
-
->[The exam from a student]()
-
-## Keeping a tidy folder
-
-A folder structure:
+## Helps you to keep a tidy folder
 
 ```
 Project name
-├── README.md          <- The general documentation
+├── LICENSE
+├── README.md          <- The top-level README for developers using this project.
 ├── data
-│   |── raw            <- Raw data is read only
-│   └── processed      <- Processed data, can be reproducible
+│   ├── external       <- Data from third party sources.
+│   ├── interim        <- Intermediate data that has been transformed.
+│   ├── processed      <- The final, canonical data sets for modeling.
+│   └── raw            <- The original read only
 │
-├── docs               <- Specific documentations
+├── docs               <- All the document information should go here
 │   ├── reports
 │   └── presentations
 │
-├── scripts            <- Script, ideally version tracked 
+├── workflow           <- Source code and snakemake rules 
+│   ├── Snakefile      <- A snakefile, should include all sub rules
+│   │
+│   ├── rules          <- Seperate snakefile rules
+│   │
+│   ├── environments   <- Conda environments
+│   │
+│   └── singularity    <- Singularity containers
 │ 
-└── results            <- Results go here
+└── results
 
 ```
 
@@ -241,7 +230,7 @@ A tidy folder keep your research trackable and reproducible.
 
 :::
 
-## Document stuff
+## Documenting
 
 + I generally place a `README.md` file
 + I generally write on markdown
@@ -259,29 +248,3 @@ If you keep documenting your steps, it will be easy to reproducec results after 
 + Share an collaborate
 + Also help you to backup
 
-# Workflow
-
-## Workflows (OK 15)
-
-+ Bash scripts are quite easy to write
-+ But, every time you run it starts from beginning
-+ Every bash script could be specific to one job
-+ Job dependency (with slurm?)
-
-## My first workflow (OK 16)
-
-![](images/wrapper.png)
-
-::: {.notes}
-My first workflow. 
-
-  - very fast
-  - completely on bash
-  - can preserve job dependencies
-  - but it runs from the beginning
-:::
-
-## Snakemake (OK 17)
-
-+ Snakemake changed my view
-+ A fully robust system that sends
