@@ -42,11 +42,11 @@
     "text": "At Aykut Kence Evolution Meeting 2022, I presented a talk named What does Ancient human microbes tell us? The talk is in Turkish.\n\nvideo"
   },
   {
-    "objectID": "presentations/2023-04-19-cpg/index.html",
-    "href": "presentations/2023-04-19-cpg/index.html",
+    "objectID": "presentations/2023-04-19-cpg/index.html#who-am-i",
+    "href": "presentations/2023-04-19-cpg/index.html#who-am-i",
     "title": "My Experience on Metagenomics and Workflows",
-    "section": "",
-    "text": "Emrah Kırdök, Ph.D.\nI am trained as a biologist\nWorking on ancient metagenomics\nGiving lectures on bioinformatics and data analysis\n\n\nHi I am Emrah Kırdök. I am working at Mersin University Department of Biotechnology as an Assistant Prof. \nCurrently, I am working on ancient metagenomics and bioinformatics.\nAlso I am teaching bioinformatics and data analysis at graduate and undergraduate level."
+    "section": "Who am I?",
+    "text": "Who am I?\n\nEmrah Kırdök, Ph.D.\nI am trained as a biologist\nWorking on ancient metagenomics\nGiving lectures on bioinformatics and data analysis\n\n\nHi I am Emrah Kırdök. I am working at Mersin University Department of Biotechnology as an Assistant Prof. \nCurrently, I am working on ancient metagenomics and bioinformatics.\nAlso I am teaching bioinformatics and data analysis at graduate and undergraduate level."
   },
   {
     "objectID": "presentations/2023-04-19-cpg/index.html#what-am-i-going-to-talk",
@@ -81,14 +81,14 @@
     "href": "presentations/2023-04-19-cpg/index.html#documenting-is-everything",
     "title": "My Experience on Metagenomics and Workflows",
     "section": "Documenting is everything",
-    "text": "Documenting is everything\nThen you’ll create bash scripts to automate your codes.\n\n\n\nA simple bash script"
+    "text": "Documenting is everything\nThen you’ll create bash scripts to automate your codes.\n\nA simple bash script"
   },
   {
     "objectID": "presentations/2023-04-19-cpg/index.html#documenting-is-everything-1",
     "href": "presentations/2023-04-19-cpg/index.html#documenting-is-everything-1",
     "title": "My Experience on Metagenomics and Workflows",
     "section": "Documenting is everything",
-    "text": "Documenting is everything\nSoon you’ll have a folder full of results, bash scripts, and other stuff.\n\n\n\nThe folder that you have\n\n\n\nSoon you will have a folder full of results. Then it becomes very tricky to find your way in these big folders. You need to document"
+    "text": "Documenting is everything\nSoon you’ll have a folder full of results, bash scripts, and other stuff.\n\nThe folder that you have\nSoon you will have a folder full of results. Then it becomes very tricky to find your way in these big folders. You need to document"
   },
   {
     "objectID": "presentations/2023-04-19-cpg/index.html#you-also-delete-stuff",
@@ -116,6 +116,6 @@
     "href": "presentations/2023-04-19-cpg/index.html#document-stuff",
     "title": "My Experience on Metagenomics and Workflows",
     "section": "Document stuff",
-    "text": "Document stuff\n\nI generally place a README.md file\nI generally write on markdown\ndocumenting is everyhting!\n\n\nIf you keep documenting your steps, it will be easy to reproducec results after a long time. Also"
+    "text": "Document stuff\n\nI generally place a README.md file\nI generally write on markdown\ndocumenting is everyhting!\n\n\nIf you keep documenting your steps, it will be easy to reproducec results after a long time. Also\n\n\n\naMeta Workshop"
   }
 ]
