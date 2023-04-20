@@ -1,5 +1,5 @@
 ---
-title: "My Experience on Metagenomics and Workflows"
+title: "My Experience on Workflows"
 institue: "Mersin University, Department of Biotechnology"
 subtitle: "aMeta Workhsop"
 author: "Emrah Kırdök, Ph.D."
@@ -30,11 +30,10 @@ After some thought, I've come up with this presentation.
 
 ## Outline
 
-+ Ancient metagenomics is still a new discipline
-+ We do not have very well defined methods
-+ Some struggle is inevitable
-+ Lessons learnt, some good practice and tricks
-+ How aMeta helped me to understand `snakemake`
++ Ancient metagenomics workflows can be complex
++ Workflowing tools is essential
++ Database problem in ancient metagenomics
++ Benefits of using workflow managers
 
 ::: {.notes}
 
@@ -46,33 +45,37 @@ But there are some tricks and tips that make your life easier in the long run. I
 
 :::
 
-# Struggles
+## Who will benefit?
+
++ Early career researchers (MSc, PhD)
++ If you are new to bioinformatics
+
+::: {.notes}
+
+The things that I am going to talk might be a little basic for most of the audience. So, I think early career researchers mostly benefit from this talk. 
+
+If I start again, which way I will work.
+
+:::
 
 ## Bioinformatics methdodology
 
-A simple methodology
-
 ```{dot}
-// fig-cap: "A simple representation of input and outputs"
+// fig-cap: "A simple representation"
 
 digraph g { 
     rankdir = LR;
-    input1 [label = "Input1"];
-    input2 [label = "Input2"];
-    parameters [labels = "Parameters", shape = "parallelogram"];
-    tool [label = "Tool", shape = "box"];
-    output1 [label = "Output1"];
-    output2 [label = "Output2"];
-    {input1; input2} -> tool;
-    tool -> {output1; output2};
-    parameters -> tool;
-    {rank = same; parameters; tool};
+    input [label = "Input"];
+
+    workflow [label = "Bioinformatics\nworkflow", shape = "box"];
+    output [label = "Output"];
+    
+    input -> workflow-> output
 }
 ```
 
 ::: {.notes}
 
-However, generally it is more complicated. You will have more than one input and more then one outputs. Often, you will have some parameters to fine tune.
 
 :::
 
@@ -155,24 +158,28 @@ However, in ancient metaggneomics, we also need to extract DNA sequences and aut
 
 :::
 
+## Authentication part of the pipeline
+
+![It would be very hard to authenticate one by one](images/authentication.png)
+
+::: {.notes}
+
+Generally, you will end up with thousands of bacterial species to authenticate. It could be really hard to control and authenticate one by one.
+:::
+
 ## Ancient metagenomics methodology
 
 It is even more complicated in a real situation:
 
 ![The aMeta Workflow](https://kirdoklab.github.io/aMeta-workshop/images/rulegrap_January_2023.png)
 
-## Authentication part of the pipeline
-
-![It would be very hard to authenticate one by one](images/authentication.png)
-
-# Workflows
-
 ## Workflows
 
++ Workflow, is the materials and methods
++ You need to know all inputs and outputs
 + Bash scripts are quite easy to write
 + But, every time you run it starts from beginning
-+ Every bash script could be specific to one job
-+ Job dependency (with slurm?)
++ Job dependency?
 
 ## My first workflow
 
@@ -187,25 +194,47 @@ My first workflow.
   - but it runs from the beginning
 :::
 
-## Snakemake
+## aMeta workflow
 
-+ aMeta allowed me to learn `snakemake`
-+ Snakemake changed my view
++ aMeta allowed me to use `snakemake` in my research
 + A fully robust system that can automatically send slurm jobs
++ Beginning is hard, but you will benefit later
++ But, sometimes can be cryptic
 
-## Snakemake
+::: {.notes}
 
-![](images/snake.png)
+You'll have to learn too much things.
 
+:::
 
-# Extras
+## aMeta
 
-## Helps you to keep a tidy folder
+![Krakenuniq classification rule as an example](images/snake.png)
 
+::: {.notes}
+
+For example this is the krakenuniq rule in snakemake. You will see the inputs, outputs, and databases clearly.
+
+:::
+
+## Databases
+
++ Metagenomic database should be big
++ Alignment for aDNA authentication
++ Alignment based databases are quite big!
++ The two step proccess in aMeta
+    + memory usage optimization
+
+## Good practices
+
++ Using snakemake, forces you to follow good practices
++ You will start doing reproducible bioinformatics
+
+## Good practices
 ```
 Project name
 ├── LICENSE
-├── README.md          <- The top-level README for developers using this project.
+├── README.md          <- The top-level README
 ├── data
 │   ├── external       <- Data from third party sources.
 │   ├── interim        <- Intermediate data that has been transformed.
@@ -235,9 +264,15 @@ A tidy folder keep your research trackable and reproducible.
 
 :::
 
-## Available on Github
+## Good practices
 
-+ Version controlling 
-+ Share an collaborate
-+ Also help you to backup
++ Version controlling
+    + git + github
+    + also a backup
++ Conda environments
+    + Automatically install dependencies
 
+## Using snakemake
+
++ Forces you to document every step
+    + manual modifications
