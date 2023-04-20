@@ -1,5 +1,5 @@
 ---
-title: "My Experience on Workflows"
+title: "My Experience on aMeta"
 institue: "Mersin University, Department of Biotechnology"
 subtitle: "aMeta Workhsop"
 author: "Emrah Kırdök, Ph.D."
