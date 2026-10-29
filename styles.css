@@ -1,1 +1,26 @@
-/* css styles */
+/* The jolla about template centres all body text (.quarto-about-jolla main).
+   Restore normal reading alignment and justify running text instead. */
+
+.quarto-about-jolla main {
+  text-align: left;
+  width: 100%;
+}
+
+/* Justify prose only. Hyphenation keeps justified lines from opening up
+   into rivers of white space. */
+.quarto-about-jolla main p,
+.quarto-about-jolla main li {
+  text-align: justify;
+  hyphens: auto;
+}
+
+/* Tables and headings read better flush left. */
+.quarto-about-jolla main table,
+.quarto-about-jolla main th,
+.quarto-about-jolla main td,
+.quarto-about-jolla main h1,
+.quarto-about-jolla main h2,
+.quarto-about-jolla main h3 {
+  text-align: left;
+  hyphens: manual;
+}
