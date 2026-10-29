@@ -17,6 +17,6 @@ website:
 format:
   html:
     page-layout: article
-    theme: vetiver
+    theme: litera
     css: styles.css
     toc: false
