@@ -6,3 +6,6 @@ _freeze
 .RData
 .Rbuildignore
 .Rhistory
+
+**/*.quarto_ipynb
+.DS_Store

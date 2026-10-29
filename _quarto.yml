@@ -1,13 +1,14 @@
 project:
   type: website
+  # One-page site: only index.qmd is published. blog.qmd, lectures.qmd,
+  # talks.qmd, posts/ and presentations/ are kept but intentionally unrendered.
+  render:
+    - index.qmd
 
 website:
   title: "Emrah Kırdök"
   navbar:
     right:
-      - about.qmd
-      - lectures.qmd
-      - talks.qmd
       - icon: github
         href: https://github.com/emrahkirdok
       - icon: twitter
@@ -18,5 +19,4 @@ format:
     page-layout: article
     theme: vetiver
     css: styles.css
-    toc: true
-    toc-depth: 2
+    toc: false

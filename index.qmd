@@ -1,22 +1,30 @@
 ---
-title: "Blog"
-listing:
-  contents: posts
-  sort: "date desc"
-  type: default
-  categories: true
-  sort-ui: false
-  filter-ui: false
-page-layout: full
-title-block-banner: true
+title: "Emrah Kırdök"
+image: profile.jpg
+about:
+  template: trestles
+  image-shape: round
+  links:
+    - icon: twitter
+      text: Twitter
+      href: https://twitter.com/emrahkirdok
+    - icon: github
+      text: Github
+      href: https://github.com/emrahkirdok
+    - icon: instagram
+      text: "Instagram"
+      href: https://instagram.com/emrahkirdok
+
 ---
 
-In this page you could find my blog posts. 
+Hi!
 
-Not too many content for now but I will write in Turkish and English. 
+This is Emrah. I am an Assistant Prof. at Mersin University Department of Biotechnology. In this website I will be blogging about academia, data science, and ancient DNA.
 
-I will use Turkish when I try to explain some concepts to studends or general audience in Turkey. 
+# Work Experience
 
-I will use English to write about academic concepts and in-depth data analysis posts.
+2019 - Current: Mersin University, Department of Biotechnology
 
-# Posts
+2018 - 2019: Stockholm University, Department of Archaelogy and Classical Studies
+
+2010 - 2016: Gebze Technical University, Department of Molecular Biology and Genetics
