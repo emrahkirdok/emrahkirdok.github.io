@@ -11,6 +11,8 @@ website:
 format:
   html:
     page-layout: article
-    theme: litera
+    theme:
+      - litera
+      - custom.scss
     css: styles.css
     toc: false

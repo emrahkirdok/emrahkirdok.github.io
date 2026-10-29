@@ -1,0 +1,27 @@
+/*-- scss:rules --*/
+
+/* The jolla about template centres everything inside <main> with
+   `div.quarto-about-jolla main{text-align:center}`. Compiled into the same
+   content-hashed bundle, these rules land after it and win — and the hash
+   changes whenever they do, so browsers can never serve a stale copy. */
+
+div.quarto-about-jolla main {
+  text-align: left;
+  width: 100%;
+}
+
+div.quarto-about-jolla main p,
+div.quarto-about-jolla main li {
+  text-align: justify;
+  hyphens: auto;
+}
+
+div.quarto-about-jolla main h1,
+div.quarto-about-jolla main h2,
+div.quarto-about-jolla main h3,
+div.quarto-about-jolla main table,
+div.quarto-about-jolla main th,
+div.quarto-about-jolla main td {
+  text-align: left;
+  hyphens: manual;
+}
