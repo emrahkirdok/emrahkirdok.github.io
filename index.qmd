@@ -2,8 +2,6 @@
 title: "Emrah Kırdök"
 subtitle: "Assistant Professor of Biotechnology, Mersin University"
 image: profile.jpg
-toc: true
-toc-depth: 2
 about:
   template: jolla
   image-shape: round
