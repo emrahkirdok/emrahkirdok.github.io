@@ -9,3 +9,6 @@ _freeze
 
 **/*.quarto_ipynb
 .DS_Store
+
+# Source CV - not published
+*.docx

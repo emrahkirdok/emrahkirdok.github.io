@@ -1,30 +1,96 @@
 ---
 title: "Emrah Kırdök"
+subtitle: "Assistant Professor of Biotechnology, Mersin University"
 image: profile.jpg
+toc: true
+toc-depth: 2
 about:
-  template: trestles
+  template: jolla
   image-shape: round
   links:
-    - icon: twitter
-      text: Twitter
-      href: https://twitter.com/emrahkirdok
+    - icon: person-vcard
+      text: ORCID
+      href: https://orcid.org/0000-0003-0500-1208
     - icon: github
       text: Github
       href: https://github.com/emrahkirdok
     - icon: instagram
-      text: "Instagram"
+      text: Instagram
       href: https://instagram.com/emrahkirdok
+    - icon: linkedin
+      text: Linkedin
+      href: https://www.linkedin.com/in/emrah-kirdok/
 
 ---
 
-Hi!
+I am an Assistant Professor at **Mersin University, Department of Biotechnology**. I use bioinformatics to recover biological signal from fragmented and noisy data.
 
-This is Emrah. I am an Assistant Prof. at Mersin University Department of Biotechnology. In this website I will be blogging about academia, data science, and ancient DNA.
+Most of my work is **ancient DNA** and **ancient metagenomics**: reconstructing past microbial communities and past human demography from heavily damaged DNA. I follow that question across several archives: 
 
-# Work Experience
+- Dental calculus records the microbial species and diversity in the human mouth
+- Lake and cave sediments record whole landscapes and the organisms that moved through them.
 
-2019 - Current: Mersin University, Department of Biotechnology
+Each is the same problem at a different scale, recovering a community from low-biomass, heavily mixed, chemically degraded DNA.
 
-2018 - 2019: Stockholm University, Department of Archaelogy and Classical Studies
+I also work on **systems biology**. I analyze RNA-seq data and combine with genome-scale metabolic models to study how microbial metabolism responds to a series of genetic changes. 
 
-2010 - 2016: Gebze Technical University, Department of Molecular Biology and Genetics
+## Selected publications
+
+Full list on [ORCID](https://orcid.org/0000-0003-0500-1208).
+
+### Ancient DNA
+
+- Yüncü E, …, **Kırdök E**, …, Somel M. (2025) *Female lineages and changing kinship patterns in Neolithic Çatalhöyük.* **Science**. [doi](https://doi.org/10.1126/science.adr2915)
+- **Kırdök E**, *et al.* (2024) *Metagenomic analysis of Mesolithic chewed pitch reveals poor oral health among stone age individuals.* **Scientific Reports**. [doi](https://doi.org/10.1038/s41598-023-48762-6)
+- Bergfeldt N, **Kırdök E**, *et al.* (2024) *Identification of microbial pathogens in Neolithic Scandinavian humans.* **Scientific Reports**. [doi](https://doi.org/10.1038/s41598-024-56096-0)
+- Pochon Z, Bergfeldt N, **Kırdök E**, *et al.* (2023) *aMeta: an accurate and memory-efficient ancient metagenomic profiling workflow.* **Genome Biology**. [doi](https://doi.org/10.1186/s13059-023-03083-9)
+- Koptekin D, …, **Kırdök E**, …, Somel M. (2023) *Spatial and temporal heterogeneity in human mobility patterns in Holocene Southwest Asia and the East Mediterranean.* **Current Biology** 33(1): 41–57.e15. [doi](https://doi.org/10.1016/j.cub.2022.11.034)
+- Kılınç GM, …, **Kırdök E**, …, Götherström A. (2021) *Human population dynamics and Yersinia pestis in ancient northeast Asia.* **Science Advances** 7(2). [doi](https://doi.org/10.1126/sciadv.abc4587)
+- Kashuba N\*, **Kırdök E**\*, *et al.* (2019) *Ancient DNA from mastics solidifies connection between material culture and genetics of Mesolithic hunter-gatherers in Scandinavia.* **Communications Biology** 2: 185. [doi](https://doi.org/10.1038/s42003-019-0399-1)
+
+### Systems biology
+
+- İlter İ, …, **Kırdök E**, …, Akkaya Ö. (2026) *Comparative analysis of precursor supply and pathway reinforcement strategies for shikimic acid biosynthesis in Pseudomonas putida.* **Microbial Cell Factories**. [doi](https://doi.org/10.1186/s12934-026-03042-6)
+
+<small>\* Equal contribution.</small>
+
+## Experience
+
+| Period | Position | Institution |
+|---|---|---|
+| 2019 – present | Assistant Professor | Mersin University, Dept. of Biotechnology |
+| 2019 | Researcher | University of Oslo, Museum of Cultural History |
+| 2018 – 2019 | Post-doctoral Researcher | Stockholm University, Archaeological Research Laboratory |
+| 2017 | Post-doctoral Researcher | Bordeaux University Bioinformatics Center |
+| 2016 – 2018 | Post-doctoral Researcher | İstanbul University, Molecular Biology and Genetics |
+| 2013 – 2014 | Guest Researcher | Max Planck Institute for Plant Breeding Research |
+| 2009 – 2016 | Research Assistant | Gebze Technical University |
+
+: {.striped tbl-colwidths="[18,30,52]"}
+
+**Ph.D.** Molecular Biology and Genetics, Gebze Technical University (2010 – 2016) ·
+**M.Sc.** Biology, Gebze Institute of Technology (2006 – 2010)
+
+## Teaching
+
+Courses at Mersin University, maintained openly as GitHub repositories — forks and contributions welcome.
+
+- [Data Analysis in Life Sciences](https://emrahkirdok.github.io/ybva/index.html) (TR) — data analysis and statistical learning, undergraduate and graduate
+- [Bioinformatics](https://emrahkirdok.github.io/biyoinformatik/index.html) (TR) — undergraduate and advanced graduate bioinformatics, focused on next-generation sequencing
+
+I also taught *Ancient Metagenomics* at the Evolutionary Genomics summer school (Boğaziçi
+University, 2023) and co-organized the Evolutionary Genomics summer school at Mersin
+University in 2022, supported by TÜBİTAK 2237-A.
+
+## Talks
+
+- *What do ancient human microbes tell us?* — 16th Aykut Kence Evolution Congress, 2022. For a general audience, in Turkish. [video](https://www.youtube.com/watch?v=H6qnviJhYcM)
+- *Ancient metagenomics and ancient pathogens* — Palaeogenomics and Human Prehistory course, Centre for Palaeogenetics, Stockholm University, 2020
+
+## Grants
+
+- *Investigating the potential of lake sedimentary ancient DNA to understand Anatolia's human and ecosystem history: a paleogenetic study of Lake Gölhisar* — TÜBİTAK 1001 (principal investigator)
+- *Metagenomic investigation of the people who lived in thirteenth-century İznik: oral microbiota, opportunistic pathogens, and dietary habits* — TÜBİTAK 1001 (principal investigator)
+- *An experimental investigation of burial traditions: human skeletal microbiome project* — TÜBİTAK 1002 (principal investigator)
+- *Metabolic engineering of Pseudomonas putida for enhanced production of the antiviral precursor shikimic acid* — TÜBİTAK 1001, 120Z407 (researcher)
+- *The metagenomic story of the Mary Rose and Kronan warships* — Mersin University BAP, 2019-3-AP-3729 (principal investigator)

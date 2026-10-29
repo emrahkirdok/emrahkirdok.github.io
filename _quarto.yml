@@ -9,10 +9,14 @@ website:
   title: "Emrah Kırdök"
   navbar:
     right:
+      - icon: person-vcard
+        href: https://orcid.org/0000-0003-0500-1208
       - icon: github
         href: https://github.com/emrahkirdok
-      - icon: twitter
-        href: https://twitter.com/emrahkirdok
+      - icon: linkedin
+        href: https://www.linkedin.com/in/emrah-kirdok/
+      - icon: instagram
+        href: https://instagram.com/emrahkirdok
   reader-mode: true
 format:
   html:
